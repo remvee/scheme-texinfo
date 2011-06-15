@@ -1,0 +1,7 @@
+Create the info files with make.  All info documents will be installed
+in the "The Algorithmic Language Scheme" dir category.
+
+The original Texinfo files are from:
+
+* SICP: http://www.neilvandyke.org/sicp-texi/
+* R5RS: ftp://ftp.cs.indiana.edu/pub/scheme-repository/doc/standards/

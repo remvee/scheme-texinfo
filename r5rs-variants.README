@@ -1,0 +1,24 @@
+From: mw@ipx2.rz.uni-mannheim.de (Marc Wachowitz)
+Organization: ---
+Newsgroups: comp.lang.scheme
+Subject: R5RS is available in Texinfo and HTML format
+
+I uploaded R5RS in Texinfo format, as well as in HTML format (mechanically
+derived from the former using texi2html), to
+
+ftp://ftp.cs.indiana.edu/pub/scheme-repository/incoming/
+
+The markup is still very rough, and is lacking much fine-grained markup,
+indexing and cross-linking beyond the general document structure. More
+will be added later (and announced here).
+
+The source in Texinfo format (r5rs.texi.gz), the result of running
+makeinfo on it (r5rs-info.tar.gz) and the result of running texi2html
+on it (r5rs-html.tar.gz) are packaged separately.
+
+In case someone missed by the original announcement,
+Richard Kelsey <kelsey@maseno.nj.nec.com> wrote:
+> The long-awaited R5RS is available by anonymous ftp at "ftp.nj.nec.com"
+> in the directory "/pub/kelsey/".
+
+-- Marc Wachowitz <mw@ipx2.rz.uni-mannheim.de>
