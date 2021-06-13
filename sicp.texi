@@ -46,27 +46,21 @@
 * SICP: (sicp). Structure and Interpretation of Computer Programs
 @end direntry
 
-@macro newterm{term}
-@cindex \term\
-@dfn{\term\}
-@end macro
-
 @setchapternewpage odd
-@setshortcontentsaftertitlepage
 
 @titlepage
 @titlefont{Structure and Interpretation}
-@sp 0.5
+@sp 1
 @title  of Computer Programs
-@sp 0.2
+@sp 1
 @subtitle Second Edition
 @subtitle Unofficial Texinfo Format @value{utfversion}
 @author Harold Abelson and Gerald Jay Sussman
-@sp 0.2
+@sp 1
 @author with Julie Sussman
-@sp 0.4
+@sp 1
 @author foreword by Alan J. Perlis
-@sp 0.4
+@sp 1
 
 @page
 @vskip 0pt plus 1filll
@@ -376,7 +370,7 @@ also much more accessible to people running on modest computers, such as
 donated '386-based PCs.  A 386 can, in theory, run Linux, Emacs, and a Scheme
 interpreter simultaneously, but most 386s probably can't also run both Netscape
 and the necessary X Window System without prematurely introducing budding young
-underfunded hackers to the concept of @newterm{thrashing}.}  UTF can also fit
+underfunded hackers to the concept of @dfn{thrashing}.}  UTF can also fit
 uncompressed on a 1.44@acronym{MB} floppy diskette, which may come in handy for
 installing UTF on PCs that do not have Internet or LAN access.
 
@@ -715,7 +709,7 @@ Underlying our approach to this subject is our conviction that ``computer
 science'' is not a science and that its significance has little to do with
 computers.  The computer revolution is a revolution in the way we think and in
 the way we express what we think.  The essence of this change is the emergence
-of what might best be called @newterm{procedural epistemology}---the study of
+of what might best be called @dfn{procedural epistemology}---the study of
 the structure of knowledge from an imperative point of view, as opposed to the
 more declarative point of view taken by classical mathematical subjects.
 Mathematics provides a framework for dealing precisely with notions of ``what
@@ -881,11 +875,11 @@ and thus all its general ideas are made.
 ---John Locke, @emph{An Essay Concerning Human Understanding} (1690)
 @end quotation
 
-We are about to study the idea of a @newterm{computational process}.
+We are about to study the idea of a @dfn{computational process}.
 Computational processes are abstract beings that inhabit computers.  As they
-evolve, processes manipulate other abstract things called @newterm{data}.  The
+evolve, processes manipulate other abstract things called @dfn{data}.  The
 evolution of a process is directed by a pattern of rules called a
-@newterm{program}.  People create programs to direct processes.  In effect, we
+@dfn{program}.  People create programs to direct processes.  In effect, we
 conjure the spirits of the computer with our spells.
 
 A computational process is indeed much like a sorcerer's idea of a spirit.  It
@@ -894,14 +888,14 @@ is very real.  It can perform intellectual work.  It can answer questions.  It
 can affect the world by disbursing money at a bank or by controlling a robot
 arm in a factory.  The programs we use to conjure processes are like a
 sorcerer's spells.  They are carefully composed from symbolic expressions in
-arcane and esoteric @newterm{programming languages} that prescribe the tasks we
+arcane and esoteric @dfn{programming languages} that prescribe the tasks we
 want our processes to perform.
 
 A computational process, in a correctly working computer, executes programs
 precisely and accurately.  Thus, like the sorcerer's apprentice, novice
 programmers must learn to understand and to anticipate the consequences of
-their conjuring.  Even small errors (usually called @newterm{bugs} or
-@newterm{glitches}) in programs can have complex and unanticipated
+their conjuring.  Even small errors (usually called @dfn{bugs} or
+@dfn{glitches}) in programs can have complex and unanticipated
 consequences.
 
 Fortunately, learning to program is considerably less dangerous than learning
@@ -915,7 +909,7 @@ Master software engineers have the ability to organize programs so that they
 can be reasonably sure that the resulting processes will perform the tasks
 intended.  They can visualize the behavior of their systems in advance.  They
 know how to structure programs so that unanticipated problems do not lead to
-catastrophic consequences, and when problems do arise, they can @newterm{debug}
+catastrophic consequences, and when problems do arise, they can @dfn{debug}
 their programs.  Well-designed computational systems, like well-designed
 automobiles or nuclear reactors, are designed in a modular manner, so that the
 parts can be constructed, replaced, and debugged separately.
@@ -928,13 +922,13 @@ usually expressed in our natural language (such as English, French, or
 Japanese), and descriptions of quantitative phenomena are expressed with
 mathematical notations, our procedural thoughts will be expressed in Lisp.
 Lisp was invented in the late 1950s as a formalism for reasoning about the use
-of certain kinds of logical expressions, called @newterm{recursion equations},
+of certain kinds of logical expressions, called @dfn{recursion equations},
 as a model for computation.  The language was conceived by John McCarthy and is
 based on his paper ``Recursive Functions of Symbolic Expressions and Their
 Computation by Machine'' (McCarthy 1960).
 
 Despite its inception as a mathematical formalism, Lisp is a practical
-programming language.  A Lisp @newterm{interpreter} is a machine that carries
+programming language.  A Lisp @dfn{interpreter} is a machine that carries
 out processes described in the Lisp language.  The first Lisp interpreter was
 implemented by McCarthy with the help of colleagues and students in the
 Artificial Intelligence Group of the @acronym{MIT} Research Laboratory of
@@ -1001,7 +995,7 @@ our discussion of programming?  Because the language possesses unique features
 that make it an excellent medium for studying important programming constructs
 and data structures and for relating them to the linguistic features that
 support them.  The most significant of these features is the fact that Lisp
-descriptions of processes, called @newterm{procedures}, can themselves be
+descriptions of processes, called @dfn{procedures}, can themselves be
 represented and manipulated as Lisp data.  The importance of this is that there
 are powerful program-design techniques that rely on the ability to blur the
 traditional distinction between ``passive'' data and ``active'' processes.  As
@@ -1028,7 +1022,7 @@ language, we should pay particular attention to the means that the language
 provides for combining simple ideas to form more complex ideas.  Every powerful
 language has three mechanisms for accomplishing this:
 
-@table @newterm
+@table @dfn
 
 @item primitive expressions
 which represent the simplest entities the language is concerned with,
@@ -1053,7 +1047,7 @@ focus on the rules for building procedures.@footnote{The characterization of
 numbers as ``simple data'' is a barefaced bluff.  In fact, the treatment of
 numbers is one of the trickiest and most confusing aspects of any programming
 language.  Some typical issues involved are these: Some computer systems
-distinguish @newterm{integers}, such as 2, from @newterm{real numbers}, such as
+distinguish @dfn{integers}, such as 2, from @dfn{real numbers}, such as
 2.71.  Is the real number 2.00 different from the integer 2?  Are the
 arithmetic operations used for integers the same as the operations used for
 real numbers?  Does 6 divided by 2 produce 3, or 3.0?  How large a number can
@@ -1084,8 +1078,8 @@ same rules allow us to build procedures to manipulate compound data as well.
 
 One easy way to get started at programming is to examine some typical
 interactions with an interpreter for the Scheme dialect of Lisp.  Imagine that
-you are sitting at a computer terminal.  You type an @newterm{expression}, and
-the interpreter responds by displaying the result of its @newterm{evaluating}
+you are sitting at a computer terminal.  You type an @dfn{expression}, and
+the interpreter responds by displaying the result of its @dfn{evaluating}
 that expression.
 
 One kind of primitive expression you might type is a number.  (More precisely,
@@ -1130,13 +1124,13 @@ numbers.  For example:
 
 Expressions such as these, formed by delimiting a list of expressions within
 parentheses in order to denote procedure application, are called
-@newterm{combinations}.  The leftmost element in the list is called the
-@newterm{operator}, and the other elements are called @newterm{operands}.  The
+@dfn{combinations}.  The leftmost element in the list is called the
+@dfn{operator}, and the other elements are called @dfn{operands}.  The
 value of a combination is obtained by applying the procedure specified by the
-operator to the @newterm{arguments} that are the values of the operands.
+operator to the @dfn{arguments} that are the values of the operands.
 
 The convention of placing the operator to the left of the operands is known as
-@newterm{prefix notation}, and it may be somewhat confusing at first because it
+@dfn{prefix notation}, and it may be somewhat confusing at first because it
 departs significantly from the customary mathematical convention.  Prefix
 notation has several advantages, however.  One of them is that it can
 accommodate procedures that may take an arbitrary number of arguments, as in
@@ -1183,7 +1177,7 @@ by writing such an expression in the form
 @end lisp
 
 @noindent
-following a formatting convention known as @newterm{pretty-printing}, in which
+following a formatting convention known as @dfn{pretty-printing}, in which
 each long combination is written so that the operands are aligned vertically.
 The resulting indentations display clearly the structure of the
 expression.@footnote{Lisp systems typically provide features to aid the user in
@@ -1195,7 +1189,7 @@ right parenthesis is typed.}
 Even with complex expressions, the interpreter always operates in the same
 basic cycle: It reads an expression from the terminal, evaluates the
 expression, and prints the result.  This mode of operation is often expressed
-by saying that the interpreter runs in a @newterm{read-eval-print loop}.
+by saying that the interpreter runs in a @dfn{read-eval-print loop}.
 Observe in particular that it is not necessary to explicitly instruct the
 interpreter to print the value of the expression.@footnote{Lisp obeys the
 convention that every expression has a value. This convention, together with
@@ -1208,7 +1202,7 @@ value of everything but the cost of nothing.''}
 
 A critical aspect of a programming language is the means it provides for using
 names to refer to computational objects.  We say that the name identifies a
-@newterm{variable} whose @newterm{value} is the object.
+@dfn{variable} whose @dfn{value} is the object.
 
 In the Scheme dialect of Lisp, we name things with @code{define}.  Typing
 
@@ -1263,7 +1257,7 @@ of relatively simple procedures.
 It should be clear that the possibility of associating values with symbols and
 later retrieving them means that the interpreter must maintain some sort of
 memory that keeps track of the name-object pairs.  This memory is called the
-@newterm{environment} (more precisely the @newterm{global environment}, since
+@dfn{environment} (more precisely the @dfn{global environment}, since
 we will see later that a computation may involve a number of different
 environments).@footnote{@ref{Chapter 3} will show that this notion of
 environment is crucial, both for understanding how the interpreter works and
@@ -1296,7 +1290,7 @@ Even this simple rule illustrates some important points about processes in
 general.  First, observe that the first step dictates that in order to
 accomplish the evaluation process for a combination we must first perform the
 evaluation process on each element of the combination.  Thus, the evaluation
-rule is @newterm{recursive} in nature; that is, it includes, as one of its
+rule is @dfn{recursive} in nature; that is, it includes, as one of its
 steps, the need to invoke the rule itself.@footnote{It may seem strange that
 the evaluation rule says, as part of the first step, that we should evaluate
 the leftmost element of a combination, since at this point that can only be an
@@ -1326,7 +1320,7 @@ percolate upward, starting from the terminal nodes and then combining at higher
 and higher levels.  In general, we shall see that recursion is a very powerful
 technique for dealing with hierarchical, treelike objects.  In fact, the
 ``percolate values upward'' form of the evaluation rule is an example of a
-general kind of process known as @newterm{tree accumulation}.
+general kind of process known as @dfn{tree accumulation}.
 
 @quotation
 @strong{@anchor{Figure 1-1}Figure 1.1:} Tree representation, showing the value
@@ -1384,7 +1378,7 @@ arguments, one of which is the value of the symbol @code{x} and the other of
 which is 3, since the purpose of the @code{define} is precisely to associate
 @code{x} with a value.  (That is, @code{(define x 3)} is not a combination.)
 
-Such exceptions to the general evaluation rule are called @newterm{special
+Such exceptions to the general evaluation rule are called @dfn{special
 forms}.  @code{Define} is the only example of a special form that we have seen
 so far, but we will meet others shortly.  Each special form has its own
 evaluation rule. The various kinds of expressions (each with its associated
@@ -1394,7 +1388,7 @@ syntax; that is, the evaluation rule for expressions can be described by a
 simple general rule together with specialized rules for a small number of
 special forms.@footnote{Special syntactic forms that are simply convenient
 alternative surface structures for things that can be written in more uniform
-ways are sometimes called @newterm{syntactic sugar}, to use a phrase coined by
+ways are sometimes called @dfn{syntactic sugar}, to use a phrase coined by
 Peter Landin.  In comparison with users of other languages, Lisp programmers,
 as a rule, are less concerned with matters of syntax.  (By contrast, examine
 any Pascal manual and notice how much of it is devoted to descriptions of
@@ -1425,7 +1419,7 @@ abstraction.
 
 @end itemize
 
-Now we will learn about @newterm{procedure definitions}, a much more powerful
+Now we will learn about @dfn{procedure definitions}, a much more powerful
 abstraction technique by which a compound operation can be given a name and
 then referred to as a unit.
 
@@ -1445,7 +1439,7 @@ We can understand this in the following way:
  To     square  something,  multiply  it  by  itself.
 @end example
 
-We have here a @newterm{compound procedure}, which has been given the name
+We have here a @dfn{compound procedure}, which has been given the name
 @code{square}.  The procedure represents the operation of multiplying something
 by itself.  The thing to be multiplied is given a local name, @code{x}, which
 plays the same role that a pronoun plays in natural language.  Evaluating the
@@ -1597,7 +1591,7 @@ and finally to
 136
 @end lisp
 
-The process we have just described is called the @newterm{substitution model}
+The process we have just described is called the @dfn{substitution model}
 for procedure application.  It can be taken as a model that determines the
 ``meaning'' of procedure application, insofar as the procedures in this chapter
 are concerned.  However, there are two points that should be stressed:
@@ -1631,7 +1625,7 @@ of the substitution process.  The problem arises from the possibility of
 confusion between the names used for the formal parameters of a procedure and
 the (possibly identical) names used in the expressions to which the procedure
 may be applied.  Indeed, there is a long history of erroneous definitions of
-@newterm{substitution} in the literature of logic and programming semantics.
+@dfn{substitution} in the literature of logic and programming semantics.
 See Stoy 1977 for a careful discussion of substitution.}
 
 @end itemize
@@ -1674,9 +1668,9 @@ are each performed twice here, corresponding to the reduction of the expression
 @code{(* 5 2)}.
 
 This alternative ``fully expand and then reduce'' evaluation method is known as
-@newterm{normal-order evaluation}, in contrast to the ``evaluate the arguments
+@dfn{normal-order evaluation}, in contrast to the ``evaluate the arguments
 and then apply'' method that the interpreter actually uses, which is called
-@newterm{applicative-order evaluation}.  It can be shown that, for procedure
+@dfn{applicative-order evaluation}.  It can be shown that, for procedure
 applications that can be modeled using substitution (including all the
 procedures in the first two chapters of this book) and that yield legitimate
 values, normal-order and applicative-order evaluation produce the same value.
@@ -1691,7 +1685,7 @@ deal with when we leave the realm of procedures that can be modeled by
 substitution.  On the other hand, normal-order evaluation can be an extremely
 valuable tool, and we will investigate some of its implications in @ref{Chapter
 3} and @ref{Chapter 4}.@footnote{In @ref{Chapter 3} we will introduce
-@newterm{stream processing}, which is a way of handling apparently ``infinite''
+@dfn{stream processing}, which is a way of handling apparently ``infinite''
 data structures by incorporating a limited form of normal-order evaluation.  In
 section @ref{4-2} we will modify the Scheme interpreter to produce a
 normal-order variant of Scheme.}
@@ -1714,7 +1708,7 @@ actions in the different cases according to the rule
       \
 @end example
 
-This construct is called a @newterm{case analysis}, and there is a special form
+This construct is called a @dfn{case analysis}, and there is a special form
 in Lisp for notating such a case analysis.  It is called @code{cond} (which
 stands for ``conditional''), and it is used as follows:
 
@@ -1743,8 +1737,8 @@ expressions
 @end lisp
 
 @noindent
-called @newterm{clauses}. The first expression in each pair is a
-@newterm{predicate}---that is, an expression whose value is interpreted as
+called @dfn{clauses}. The first expression in each pair is a
+@dfn{predicate}---that is, an expression whose value is interpreted as
 either true or false.@footnote{``Interpreted as either true or false'' means
 this: In Scheme, there are two distinguished values that are denoted by the
 constants @code{#t} and @code{#f}.  When the interpreter checks a predicate's
@@ -1757,12 +1751,12 @@ Conditional expressions are evaluated as follows.  The predicate <@var{p1}> is
 evaluated first.  If its value is false, then <@var{p2}> is evaluated.  If
 <@var{p2}>'s value is also false, then <@var{p3}> is evaluated.  This process
 continues until a predicate is found whose value is true, in which case the
-interpreter returns the value of the corresponding @newterm{consequent
+interpreter returns the value of the corresponding @dfn{consequent
 expression} <@var{e}> of the clause as the value of the conditional expression.
 If none of the <@var{p}>'s is found to be true, the value of the @code{cond} is
 undefined.
 
-The word @newterm{predicate} is used for procedures that return true or false,
+The word @dfn{predicate} is used for procedures that return true or false,
 as well as for expressions that evaluate to true or false.  The absolute-value
 procedure @code{abs} makes use of the primitive predicates @code{>}, @code{<},
 and @code{=}.@footnote{@code{Abs} also uses the ``minus'' operator @code{-},
@@ -2216,7 +2210,7 @@ procedures.)
 
 @code{Sqrt} is our first example of a process defined by a set of mutually
 defined procedures.  Notice that the definition of @code{sqrt-iter} is
-@newterm{recursive}; that is, the procedure is defined in terms of itself.  The
+@dfn{recursive}; that is, the procedure is defined in terms of itself.  The
 idea of being able to define a procedure in terms of itself may be disturbing;
 it may seem unclear how such a ``circular'' definition could make sense at all,
 much less specify a well-defined process to be carried out by a computer.  This
@@ -2257,7 +2251,7 @@ computes its result, only with the fact that it computes the square.  The
 details of how the square is computed can be suppressed, to be considered at a
 later time.  Indeed, as far as the @code{good-enough?} procedure is concerned,
 @code{square} is not quite a procedure but rather an abstraction of a
-procedure, a so-called @newterm{procedural abstraction}.  At this level of
+procedure, a so-called @dfn{procedural abstraction}.  At this level of
 abstraction, any procedure that computes the square is equally good.
 
 Thus, considering only the values they return, the following two procedures for
@@ -2328,14 +2322,14 @@ Thus, @code{square} would not be the black box we desired.
 
 A formal parameter of a procedure has a very special role in the procedure
 definition, in that it doesn't matter what name the formal parameter has.  Such
-a name is called a @newterm{bound variable}, and we say that the procedure
-definition @newterm{binds} its formal parameters.  The meaning of a procedure
+a name is called a @dfn{bound variable}, and we say that the procedure
+definition @dfn{binds} its formal parameters.  The meaning of a procedure
 definition is unchanged if a bound variable is consistently renamed throughout
 the definition.@footnote{The concept of consistent renaming is actually subtle
 and difficult to define formally.  Famous logicians have made embarrassing
-errors here.}  If a variable is not bound, we say that it is @newterm{free}.
+errors here.}  If a variable is not bound, we say that it is @dfn{free}.
 The set of expressions for which a binding defines a name is called the
-@newterm{scope} of that name.  In a procedure definition, the bound variables
+@dfn{scope} of that name.  In a procedure definition, the bound variables
 declared as the formal parameters of the procedure have the body of the
 procedure as their scope.
 
@@ -2344,7 +2338,7 @@ bound variables but @code{<}, @code{-}, @code{abs}, and @code{square} are free.
 The meaning of @code{good-enough?} should be independent of the names we choose
 for @code{guess} and @code{x} so long as they are distinct and different from
 @code{<}, @code{-}, @code{abs}, and @code{square}.  (If we renamed @code{guess}
-to @code{abs} we would have introduced a bug by @newterm{capturing} the
+to @code{abs} we would have introduced a bug by @dfn{capturing} the
 variable @code{abs}.  It would have changed from free to bound.)  The meaning
 of @code{good-enough?} is not independent of the names of its free variables,
 however.  It surely depends upon the fact (external to this definition) that
@@ -2404,7 +2398,7 @@ example, in the square-root problem we can write
   (sqrt-iter 1.0 x))
 @end lisp
 
-Such nesting of definitions, called @newterm{block structure}, is basically the
+Such nesting of definitions, called @dfn{block structure}, is basically the
 right solution to the simplest name-packaging problem.  But there is a better
 idea lurking here.  In addition to internalizing the definitions of the
 auxiliary procedures, we can simplify them.  Since @code{x} is bound in the
@@ -2414,7 +2408,7 @@ scope of @code{x}.  Thus, it is not necessary to pass @code{x} explicitly to
 each of these procedures.  Instead, we allow @code{x} to be a free variable in
 the internal definitions, as shown below. Then @code{x} gets its value from the
 argument with which the enclosing procedure @code{sqrt} is called.  This
-discipline is called @newterm{lexical scoping}.@footnote{[Footnote
+discipline is called @dfn{lexical scoping}.@footnote{[Footnote
 28]@anchor{Footnote 28} Lexical scoping dictates that free variables in a
 procedure are taken to refer to bindings made by enclosing procedure
 definitions; that is, they are looked up in the environment in which the
@@ -2470,10 +2464,10 @@ visualize the processes generated by various types of procedures.  Only after
 we have developed such a skill can we learn to reliably construct programs that
 exhibit the desired behavior.
 
-A procedure is a pattern for the @newterm{local evolution} of a computational
+A procedure is a pattern for the @dfn{local evolution} of a computational
 process.  It specifies how each stage of the process is built upon the previous
 stage.  We would like to be able to make statements about the overall, or
-@newterm{global}, behavior of a process whose local evolution has been
+@dfn{global}, behavior of a process whose local evolution has been
 specified by a procedure.  This is very difficult to do in general, but we can
 at least try to describe some typical patterns of process evolution.
 
@@ -2622,27 +2616,27 @@ differently.
 
 Consider the first process.  The substitution model reveals a shape of
 expansion followed by contraction, indicated by the arrow in @ref{Figure 1-3}.
-The expansion occurs as the process builds up a chain of @newterm{deferred
+The expansion occurs as the process builds up a chain of @dfn{deferred
 operations} (in this case, a chain of multiplications).  The contraction occurs
 as the operations are actually performed.  This type of process, characterized
-by a chain of deferred operations, is called a @newterm{recursive process}.
+by a chain of deferred operations, is called a @dfn{recursive process}.
 Carrying out this process requires that the interpreter keep track of the
 operations to be performed later on.  In the computation of @i{n}!, the length
 of the chain of deferred multiplications, and hence the amount of information
 needed to keep track of it, grows linearly with @i{n} (is proportional to
 @i{n}), just like the number of steps.  Such a process is called a
-@newterm{linear recursive process}.
+@dfn{linear recursive process}.
 
 By contrast, the second process does not grow and shrink.  At each step, all we
 need to keep track of, for any @i{n}, are the current values of the variables
 @code{product}, @code{counter}, and @code{max-count}.  We call this an
-@newterm{iterative process}.  In general, an iterative process is one whose
-state can be summarized by a fixed number of @newterm{state variables},
+@dfn{iterative process}.  In general, an iterative process is one whose
+state can be summarized by a fixed number of @dfn{state variables},
 together with a fixed rule that describes how the state variables should be
 updated as the process moves from state to state and an (optional) end test
 that specifies conditions under which the process should terminate.  In
 computing @i{n}!, the number of steps required grows linearly with @i{n}.  Such
-a process is called a @newterm{linear iterative process}.
+a process is called a @dfn{linear iterative process}.
 
 The contrast between the two processes can be seen in another way.  In the
 iterative case, the program variables provide a complete description of the
@@ -2657,11 +2651,11 @@ maintained.@footnote{When we discuss the implementation of procedures on
 register machines in @ref{Chapter 5}, we will see that any iterative process
 can be realized ``in hardware'' as a machine that has a fixed set of registers
 and no auxiliary memory.  In contrast, realizing a recursive process requires a
-machine that uses an auxiliary data structure known as a @newterm{stack}.}
+machine that uses an auxiliary data structure known as a @dfn{stack}.}
 
 In contrasting iteration and recursion, we must be careful not to confuse the
-notion of a recursive @newterm{process} with the notion of a recursive
-@newterm{procedure}.  When we describe a procedure as recursive, we are
+notion of a recursive @dfn{process} with the notion of a recursive
+@dfn{procedure}.  When we describe a procedure as recursive, we are
 referring to the syntactic fact that the procedure definition refers (either
 directly or indirectly) to the procedure itself.  But when we describe a
 process as following a pattern that is, say, linearly recursive, we are
@@ -2683,7 +2677,7 @@ special-purpose ``looping constructs'' such as @code{do}, @code{repeat},
 shall consider in @ref{Chapter 5} does not share this defect.  It will execute
 an iterative process in constant space, even if the iterative process is
 described by a recursive procedure.  An implementation with this property is
-called @newterm{tail-recursive}.  With a tail-recursive implementation,
+called @dfn{tail-recursive}.  With a tail-recursive implementation,
 iteration can be expressed using the ordinary procedure call mechanism, so that
 special iteration constructs are useful only as syntactic sugar.@footnote{Tail
 recursion has long been known as a compiler optimization trick.  A coherent
@@ -2762,7 +2756,7 @@ procedures @code{f}, @code{g}, and @code{h} for positive integer values of
 @node	1-2-2, 1-2-3, 1-2-1, 1-2
 @subsection Tree Recursion
 
-Another common pattern of computation is called @newterm{tree recursion}.  As
+Another common pattern of computation is called @dfn{tree recursion}.  As
 an example, consider computing the sequence of Fibonacci numbers, in which each
 number is the sum of the preceding two:
 
@@ -2837,7 +2831,7 @@ to @i{[phi]}^@i{n} /@i{[sqrt]}(5), where
 @end example
 
 @noindent
-is the @newterm{golden ratio}, which satisfies the equation
+is the @dfn{golden ratio}, which satisfies the equation
 
 @example
 [phi]^2 = [phi] + 1
@@ -2996,7 +2990,7 @@ redundant computations is to arrange matters so that we automatically construct
 a table of values as they are computed.  Each time we are asked to apply the
 procedure to some argument, we first look to see if the value is already stored
 in the table, in which case we avoid performing the redundant computation.
-This strategy, known as @newterm{tabulation} or @newterm{memoization}, can be
+This strategy, known as @dfn{tabulation} or @dfn{memoization}, can be
 implemented in a straightforward way.  Tabulation can sometimes be used to
 transform processes that require an exponential number of steps (such as
 @code{count-change}) into processes whose space and time requirements grow
@@ -3012,7 +3006,7 @@ computes @i{f} by means of an iterative process.
 
 @quotation
 @strong{@anchor{Exercise 1-12}Exercise 1.12:} The following pattern of numbers
-is called @newterm{Pascal's triangle}.
+is called @dfn{Pascal's triangle}.
 
 @example
         1
@@ -3024,7 +3018,7 @@ is called @newterm{Pascal's triangle}.
 
 The numbers at the edge of the triangle are all 1, and each number inside the
 triangle is the sum of the two numbers above it.@footnote{The elements of
-Pascal's triangle are called the @newterm{binomial coefficients}, because the
+Pascal's triangle are called the @dfn{binomial coefficients}, because the
 @i{n}th row consists of the coefficients of the terms in the expansion of
 (@i{x} + @i{y})^@i{n}.  This pattern for computing the coefficients appeared in
 Blaise Pascal's 1653 seminal work on probability theory, @cite{Trait@'e du
@@ -3051,7 +3045,7 @@ Use induction and the definition of the Fibonacci numbers (see section
 
 The previous examples illustrate that processes can differ considerably in the
 rates at which they consume computational resources.  One convenient way to
-describe this difference is to use the notion of @newterm{order of growth} to
+describe this difference is to use the notion of @dfn{order of growth} to
 obtain a gross measure of the resources required by a process as the inputs
 become larger.
 
@@ -3286,7 +3280,7 @@ define the state transformation in such a way that the product @i{a}
 @i{b}^@i{n} is unchanged from state to state.  At the beginning of the process
 @i{a} is taken to be 1, and the answer is given by the value of @i{a} at the
 end of the process.  In general, the technique of defining an
-@newterm{invariant quantity} that remains unchanged from state to state is a
+@dfn{invariant quantity} that remains unchanged from state to state is a
 powerful way to think about the design of iterative algorithms.)
 @end quotation
 
@@ -3406,7 +3400,7 @@ reduces @acronym{GCD}(206,40) to @acronym{GCD}(2,0), which is 2.  It is
 possible to show that starting with any two positive integers and performing
 repeated reductions will always eventually produce a pair where the second
 number is 0.  Then the @acronym{GCD} is the other number in the pair.  This
-method for computing the @acronym{GCD} is known as @newterm{Euclid's
+method for computing the @acronym{GCD} is known as @dfn{Euclid's
 Algorithm}.@footnote{Euclid's Algorithm is so called because it appears in
 Euclid's @cite{Elements} (Book 7, ca. 300 @acronym{B.C.}).  According to Knuth
 (1973), it can be considered the oldest known nontrivial algorithm.  The
@@ -3556,10 +3550,10 @@ positive integer less than @i{n}, then @i{a} raised to the @i{n}th power is
 congruent to @i{a} modulo @i{n}.
 @end quotation
 
-(Two numbers are said to be @newterm{congruent modulo} @i{n} if they both have
+(Two numbers are said to be @dfn{congruent modulo} @i{n} if they both have
 the same remainder when divided by @i{n}.  The remainder of a number @i{a} when
-divided by @i{n} is also referred to as the @newterm{remainder of} @i{a}
-@newterm{modulo} @i{n}, or simply as @i{a} @newterm{modulo} @i{n}.)
+divided by @i{n} is also referred to as the @dfn{remainder of} @i{a}
+@dfn{modulo} @i{n}, or simply as @i{a} @dfn{modulo} @i{n}.)
 
 If @i{n} is not prime, then, in general, most of the numbers @i{a}< @i{n} will
 not satisfy the above relation.  This leads to the following algorithm for
@@ -3642,7 +3636,7 @@ that fool the Fermat test: numbers @i{n} that are not prime and yet have the
 property that @i{a}^@i{n} is congruent to @i{a} modulo @i{n} for all integers
 @i{a} < @i{n}.  Such numbers are extremely rare, so the Fermat test is quite
 reliable in practice.@footnote{[Footnote 1.47]@anchor{Footnote 1-47} Numbers
-that fool the Fermat test are called @newterm{Carmichael numbers}, and little
+that fool the Fermat test are called @dfn{Carmichael numbers}, and little
 is known about them other than that they are extremely rare.  There are 255
 Carmichael numbers below 100,000,000.  The smallest few are 561, 1105, 1729,
 2465, 2821, and 6601.  In testing primality of very large numbers chosen at
@@ -3666,7 +3660,7 @@ values of @i{a} we can make the probability of error as small as we like.
 
 The existence of tests for which one can prove that the chance of error becomes
 arbitrarily small has sparked interest in algorithms of this type, which have
-come to be known as @newterm{probabilistic algorithms}.  There is a great deal
+come to be known as @dfn{probabilistic algorithms}.  There is a great deal
 of research activity in this area, and probabilistic algorithms have been
 fruitfully applied to many fields.@footnote{One of the most striking
 applications of probabilistic prime testing has been to the field of
@@ -3674,7 +3668,7 @@ cryptography.  Although it is now computationally infeasible to factor an
 arbitrary 200-digit number, the primality of such a number can be checked in a
 few seconds with the Fermat test.  This fact forms the basis of a technique for
 constructing ``unbreakable codes'' suggested by Rivest, Shamir, and Adleman
-(1977).  The resulting @newterm{RSA algorithm} has become a widely used
+(1977).  The resulting @dfn{RSA algorithm} has become a widely used
 technique for enhancing the security of electronic communications.  Because of
 this and related developments, the study of prime numbers, once considered the
 epitome of a topic in ``pure'' mathematics to be studied only for its own sake,
@@ -3802,7 +3796,7 @@ on the given Carmichael numbers.
 
 @quotation
 @strong{@anchor{Exercise 1-28}Exercise 1.28:} One variant of the Fermat test
-that cannot be fooled is called the @newterm{Miller-Rabin test} (Miller 1976;
+that cannot be fooled is called the @dfn{Miller-Rabin test} (Miller 1976;
 Rabin 1980).  This starts from an alternate form of Fermat's Little Theorem,
 which states that if @i{n} is a prime number and @i{a} is any positive integer
 less than @i{n}, then @i{a} raised to the (@i{n} - 1)st power is congruent to 1
@@ -3864,7 +3858,7 @@ numbers.  Often the same programming pattern will be used with a number of
 different procedures.  To express such patterns as concepts, we will need to
 construct procedures that can accept procedures as arguments or return
 procedures as values.  Procedures that manipulate procedures are called
-@newterm{higher-order procedures}.  This section shows how higher-order
+@dfn{higher-order procedures}.  This section shows how higher-order
 procedures can serve as powerful abstraction mechanisms, vastly increasing the
 expressive power of our language.
 
@@ -3934,7 +3928,7 @@ procedures by filling in slots in the same template:
 
 The presence of such a common pattern is strong evidence that there is a useful
 abstraction waiting to be brought to the surface.  Indeed, mathematicians long
-ago identified the abstraction of @newterm{summation of a series} and invented
+ago identified the abstraction of @dfn{summation of a series} and invented
 ``sigma notation,'' for example
 
 @example
@@ -4093,7 +4087,9 @@ expressions in the following definition:
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 1-31}Exercise 1.31:} @enumerate a
+@strong{@anchor{Exercise 1-31}Exercise 1.31:}
+
+@enumerate a
 
 @item
 The @code{sum} procedure is only the simplest of a vast number of similar
@@ -4104,7 +4100,7 @@ consolidate many seemingly disparate operations.  However, though accumulation
 and filtering are elegant ideas, our hands are somewhat tied in using them at
 this point since we do not yet have data structures to provide suitable means
 of combination for these abstractions.  We will return to these ideas in
-section @ref{2-2-3} when we show how to use @newterm{sequences} as interfaces
+section @ref{2-2-3} when we show how to use @dfn{sequences} as interfaces
 for combining filters and accumulators to build even more powerful
 abstractions.  We will see there how these methods really come into their own
 as a powerful and elegant approach to designing programs.}  Write an analogous
@@ -4129,7 +4125,9 @@ one that generates a recursive process.
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 1-32}Exercise 1.32:} @enumerate a
+@strong{@anchor{Exercise 1-32}Exercise 1.32:}
+
+@enumerate a
 
 @item
 Show that @code{sum} and @code{product} (@ref{Exercise 1-31}) are both special
@@ -4159,7 +4157,7 @@ write one that generates a recursive process.
 @quotation
 @strong{@anchor{Exercise 1-33}Exercise 1.33:} You can obtain an even more
 general version of @code{accumulate} (@ref{Exercise 1-32}) by introducing the
-notion of a @newterm{filter} on the terms to be combined.  That is, combine
+notion of a @dfn{filter} on the terms to be combined.  That is, combine
 only those terms derived from values in the range that satisfy a specified
 condition.  The resulting @code{filtered-accumulate} abstraction takes the same
 arguments as accumulate, together with an additional predicate of one argument
@@ -4472,7 +4470,7 @@ directly as procedures.
 
 @subsubheading Finding roots of equations by the half-interval method
 
-The @newterm{half-interval method} is a simple but powerful technique for
+The @dfn{half-interval method} is a simple but powerful technique for
 finding roots of an equation @i{f}(@i{x}) = 0, where @i{f} is a continuous
 function.  The idea is that, if we are given points @i{a} and @i{b} such that
 @i{f}(@i{a}) < 0 < @i{f}(@i{b}), then @i{f} must have at least one zero between
@@ -4568,7 +4566,7 @@ the equation @i{x}^3 - 2@i{x} - 3 = 0 between 1 and 2:
 
 @subsubheading Finding fixed points of functions
 
-A number @i{x} is called a @newterm{fixed point} of a function @i{f} if @i{x}
+A number @i{x} is called a @dfn{fixed point} of a function @i{f} if @i{x}
 satisfies the equation @i{f}(@i{x}) = @i{x}.  For some functions @i{f} we can
 locate a fixed point by beginning with an initial guess and applying @i{f}
 repeatedly,
@@ -4664,7 +4662,7 @@ unravel the definitions, we can see that the sequence of approximations to the
 square root generated here is precisely the same as the one generated by our
 original square-root procedure of section @ref{1-1-7}.  This approach of
 averaging successive approximations to a solution, a technique we that we call
-@newterm{average damping}, often aids the convergence of fixed-point searches.
+@dfn{average damping}, often aids the convergence of fixed-point searches.
 
 @quotation
 @strong{@anchor{Exercise 1-35}Exercise 1.35:} Show that the golden ratio
@@ -4686,10 +4684,12 @@ this takes with and without average damping.  (Note that you cannot start
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 1-37}Exercise 1.37:} @enumerate a
+@strong{@anchor{Exercise 1-37}Exercise 1.37:}
+
+@enumerate a
 
 @item
-An infinite @newterm{continued fraction} is an expression of the form
+An infinite @dfn{continued fraction} is an expression of the form
 
 @example
            N_1
@@ -4705,7 +4705,7 @@ As an example, one can show that the infinite continued fraction expansion with
 the @i{n}_@i{i} and the @i{D}_@i{i} all equal to 1 produces 1/@i{[phi]}, where
 @i{[phi]} is the golden ratio (described in section @ref{1-2-2}).  One way to
 approximate an infinite continued fraction is to truncate the expansion after a
-given number of terms.  Such a truncation---a so-called @newterm{@i{k}-term
+given number of terms.  Such a truncation---a so-called @dfn{@i{k}-term
 finite continued fraction}---has the form
 
 @example
@@ -4847,7 +4847,7 @@ square-root procedure to one that extracts cube roots:@footnote{See
 @subsubheading Newton's method
 
 When we first introduced the square-root procedure, in section @ref{1-1-7}, we
-mentioned that this was a special case of @newterm{Newton's method}.  If @i{x}
+mentioned that this was a special case of @dfn{Newton's method}.  If @i{x}
 |-> @i{g}(@i{x}) is a differentiable function, then a solution of the equation
 @i{g}(@i{x}) = 0 is a fixed point of the function @i{x} |-> @i{f}(@i{x}) where
 
@@ -5005,7 +5005,7 @@ other computational elements.
 
 In general, programming languages impose restrictions on the ways in which
 computational elements can be manipulated.  Elements with the fewest
-restrictions are said to have @newterm{first-class} status.  Some of the
+restrictions are said to have @dfn{first-class} status.  Some of the
 ``rights and privileges'' of first-class elements are:@footnote{The notion of
 first-class status of programming-language elements is due to the British
 computer scientist Christopher Strachey (1916-1975).}
@@ -5064,7 +5064,7 @@ procedure that adds 2.  What value is returned by
 
 @quotation
 @strong{@anchor{Exercise 1-42}Exercise 1.42:} Let @i{f} and @i{g} be two
-one-argument functions.  The @newterm{composition} @i{f} after @i{g} is defined
+one-argument functions.  The @dfn{composition} @i{f} after @i{g} is defined
 to be the function @i{x} |-> @i{f}(@i{g}(@i{x})).  Define a procedure
 @code{compose} that implements composition.  For example, if @code{inc} is a
 procedure that adds 1 to its argument,
@@ -5098,7 +5098,7 @@ Hint: You may find it convenient to use @code{compose} from @ref{Exercise
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 1-44}Exercise 1.44:} The idea of @newterm{smoothing} a
+@strong{@anchor{Exercise 1-44}Exercise 1.44:} The idea of @dfn{smoothing} a
 function is an important concept in signal processing.  If @i{f} is a function
 and @i{d}@i{x} is some small number, then the smoothed version of @i{f} is the
 function whose value at a point @i{x} is the average of @i{f}(@i{x} -
@@ -5106,7 +5106,7 @@ function whose value at a point @i{x} is the average of @i{f}(@i{x} -
 @code{smooth} that takes as input a procedure that computes @i{f} and returns a
 procedure that computes the smoothed @i{f}.  It is sometimes valuable to
 repeatedly smooth a function (that is, smooth the smoothed function, and so on)
-to obtained the @newterm{@i{n}-fold smoothed function}.  Show how to generate
+to obtained the @dfn{@i{n}-fold smoothed function}.  Show how to generate
 the @i{n}-fold smoothed function of any given function using @code{smooth} and
 @code{repeated} from @ref{Exercise 1-43}.
 @end quotation
@@ -5132,7 +5132,7 @@ operations you need are available as primitives.
 @quotation
 @strong{@anchor{Exercise 1-46}Exercise 1.46:} Several of the numerical methods
 described in this chapter are instances of an extremely general computational
-strategy known as @newterm{iterative improvement}.  Iterative improvement says
+strategy known as @dfn{iterative improvement}.  Iterative improvement says
 that, to compute something, we start with an initial guess for the answer, test
 if the guess is good enough, and otherwise improve the guess and continue the
 process using the improved guess as the new guess.  Write a procedure
@@ -5178,7 +5178,7 @@ to model real-world phenomena that have several aspects.  Thus, whereas our
 focus in @ref{Chapter 1} was on building abstractions by combining procedures
 to form compound procedures, we turn in this chapter to another key aspect of
 any programming language: the means it provides for building abstractions by
-combining data objects to form @newterm{compound data}.
+combining data objects to form @dfn{compound data}.
 
 Why do we want compound data in a programming language?  For the same reasons
 that we want compound procedures: to elevate the conceptual level at which we
@@ -5202,7 +5202,7 @@ denominators.  In a system intended to perform many operations on many rational
 numbers, such bookkeeping details would clutter the programs substantially, to
 say nothing of what they would do to our minds.  It would be much better if we
 could ``glue together'' a numerator and denominator to form a pair---a
-@newterm{compound data object}---that our programs could manipulate in a way
+@dfn{compound data object}---that our programs could manipulate in a way
 that would be consistent with regarding a rational number as a single
 conceptual unit.
 
@@ -5213,7 +5213,7 @@ rational numbers per se from the details of how rational numbers may be
 represented as pairs of integers.  The general technique of isolating the parts
 of a program that deal with how data objects are represented from the parts of
 a program that deal with how data objects are used is a powerful design
-methodology called @newterm{data abstraction}.  We will see how data
+methodology called @dfn{data abstraction}.  We will see how data
 abstraction makes programs much easier to design, maintain, and modify.
 
 The use of compound data leads to a real increase in the expressive
@@ -5273,7 +5273,7 @@ mentioned above.  This will form the background for our discussion of compound
 data and data abstraction.  As with compound procedures, the main issue to be
 addressed is that of abstraction as a technique for coping with complexity, and
 we will see how data abstraction enables us to erect suitable
-@newterm{abstraction barriers} between different parts of a program.
+@dfn{abstraction barriers} between different parts of a program.
 
 We will see that the key to forming compound data is that a programming
 language should provide some kind of ``glue'' so that data objects can be
@@ -5283,15 +5283,15 @@ glue.  Indeed, we will discover how to form compound data using no special
 distinction between ``procedure'' and ``data,'' which was already becoming
 tenuous toward the end of @ref{Chapter 1}.  We will also explore some
 conventional techniques for representing sequences and trees.  One key idea in
-dealing with compound data is the notion of @newterm{closure}---that the glue
+dealing with compound data is the notion of @dfn{closure}---that the glue
 we use for combining data objects should allow us to combine not only primitive
 data objects, but compound data objects as well.  Another key idea is that
-compound data objects can serve as @newterm{conventional interfaces} for
+compound data objects can serve as @dfn{conventional interfaces} for
 combining program modules in mix-and-match ways.  We illustrate some of these
 ideas by presenting a simple graphics language that exploits closure.
 
 We will then augment the representational power of our language by introducing
-@newterm{symbolic expressions}---data whose elementary parts can be arbitrary
+@dfn{symbolic expressions}---data whose elementary parts can be arbitrary
 symbols rather than only numbers.  We explore various alternatives for
 representing sets of objects.  We will find that, just as a given numerical
 function can be computed by many different computational processes, there are
@@ -5303,12 +5303,12 @@ representation of sets, and the encoding of information.
 
 Next we will take up the problem of working with data that may be represented
 differently by different parts of a program.  This leads to the need to
-implement @newterm{generic operations}, which must handle many different types
+implement @dfn{generic operations}, which must handle many different types
 of data.  Maintaining modularity in the presence of generic operations requires
 more powerful abstraction barriers than can be erected with simple data
-abstraction alone.  In particular, we introduce @newterm{data-directed
+abstraction alone.  In particular, we introduce @dfn{data-directed
 programming} as a technique that allows individual data representations to be
-designed in isolation and then combined @newterm{additively} (i.e., without
+designed in isolation and then combined @dfn{additively} (i.e., without
 modification).  To illustrate the power of this approach to system design, we
 close the chapter by applying what we have learned to the implementation of a
 package for performing symbolic arithmetic on polynomials, in which the
@@ -5334,7 +5334,7 @@ particular procedure itself could be replaced by any other procedure with the
 same overall behavior.  In other words, we could make an abstraction that would
 separate the way the procedure would be used from the details of how the
 procedure would be implemented in terms of more primitive procedures.  The
-analogous notion for compound data is called @newterm{data abstraction}.  Data
+analogous notion for compound data is called @dfn{data abstraction}.  Data
 abstraction is a methodology that enables us to isolate how a compound data
 object is used from the details of how it is constructed from more primitive
 data objects.
@@ -5345,7 +5345,7 @@ programs should use data in such a way as to make no assumptions about the data
 that are not strictly necessary for performing the task at hand.  At the same
 time, a ``concrete'' data representation is defined independent of the programs
 that use the data.  The interface between these two parts of our system will be
-a set of procedures, called @newterm{selectors} and @newterm{constructors},
+a set of procedures, called @dfn{selectors} and @dfn{constructors},
 that implement the abstract data in terms of the concrete representation.  To
 illustrate this technique, we will consider how to design a set of procedures
 for manipulating rational numbers.
@@ -5387,7 +5387,7 @@ numerator is the integer @code{<@var{n}>} and whose denominator is the integer
 
 @end itemize
 
-We are using here a powerful strategy of synthesis: @newterm{wishful thinking}.
+We are using here a powerful strategy of synthesis: @dfn{wishful thinking}.
 We haven't yet said how a rational number is represented, or how the procedures
 @code{numer}, @code{denom}, and @code{make-rat} should be implemented.  Even
 so, if we did have these three procedures, we could then add, subtract,
@@ -5450,7 +5450,7 @@ numerator and a denominator to form a rational number.
 @subsubheading Pairs
 
 To enable us to implement the concrete level of our data abstraction, our
-language provides a compound structure called a @newterm{pair}, which can be
+language provides a compound structure called a @dfn{pair}, which can be
 constructed with the primitive procedure @code{cons}.  This procedure takes two
 arguments and returns a compound data object that contains the two arguments as
 parts.  Given a pair, we can extract the parts using the primitive procedures
@@ -5493,10 +5493,10 @@ pairs whose elements are pairs, and so on:
 
 In section @ref{2-2} we will see how this ability to combine pairs means that
 pairs can be used as general-purpose building blocks to create all sorts of
-complex data structures.  The single compound-data primitive @newterm{pair},
+complex data structures.  The single compound-data primitive @dfn{pair},
 implemented by the procedures @code{cons}, @code{car}, and @code{cdr}, is the
 only glue we need.  Data objects constructed from pairs are called
-@newterm{list-structured} data.
+@dfn{list-structured} data.
 
 @subsubheading Representing rational numbers
 
@@ -5617,7 +5617,7 @@ of that type will be expressed, and then to use only those operations in
 manipulating the data.
 
 We can envision the structure of the rational-number system as shown in figure
-@ref{Figure 2-1}.  The horizontal lines represent @newterm{abstraction
+@ref{Figure 2-1}.  The horizontal lines represent @dfn{abstraction
 barriers} that isolate different ``levels'' of the system.  At each level, the
 barrier separates the programs (above) that use the data abstraction from the
 programs (below) that implement the data abstraction.  Programs that use
@@ -5747,7 +5747,7 @@ and @code{denom}.  At that point, we could think of the operations as being
 defined in terms of data objects---numerators, denominators, and rational
 numbers---whose behavior was specified by the latter three procedures.
 
-But exactly what is meant by @newterm{data}?  It is not enough to say
+But exactly what is meant by @dfn{data}?  It is not enough to say
 ``whatever is implemented by the given selectors and constructors.''  Clearly,
 not every arbitrary set of three procedures can serve as an appropriate basis
 for the rational-number implementation.  We need to guarantee that, if we
@@ -5771,7 +5771,7 @@ some collection of selectors and constructors, together with specified
 conditions that these procedures must fulfill in order to be a valid
 representation.@footnote{Surprisingly, this idea is very difficult to formulate
 rigorously. There are two approaches to giving such a formulation.  One,
-pioneered by C. A. R. Hoare (1972), is known as the method of @newterm{abstract
+pioneered by C. A. R. Hoare (1972), is known as the method of @dfn{abstract
 models}.  It formalizes the ``procedures plus conditions'' specification as
 outlined in the rational-number example above.  Note that the condition on the
 rational-number representation was stated in terms of facts about integers
@@ -5781,7 +5781,7 @@ data objects can therefore be checked by reducing them to assertions about
 previously defined data objects.  Another approach, introduced by Zilles at
 @acronym{MIT}, by Goguen, Thatcher, Wagner, and Wright at IBM (see Thatcher,
 Wagner, and Wright 1978), and by Guttag at Toronto (see Guttag 1977), is called
-@newterm{algebraic specification}.  It regards the ``procedures'' as elements
+@dfn{algebraic specification}.  It regards the ``procedures'' as elements
 of an abstract algebraic system whose behavior is specified by axioms that
 correspond to our ``conditions,'' and uses the techniques of abstract algebra
 to check assertions about data objects.  Both methods are surveyed in the paper
@@ -5844,7 +5844,7 @@ fulfill.  This example also demonstrates that the ability to manipulate
 procedures as objects automatically provides the ability to represent compound
 data.  This may seem a curiosity now, but procedural representations of data
 will play a central role in our programming repertoire.  This style of
-programming is often called @newterm{message passing}, and we will be using it
+programming is often called @dfn{message passing}, and we will be using it
 as a basic tool in @ref{Chapter 3} when we address the issues of modeling and
 simulation.
 
@@ -5887,7 +5887,7 @@ adding 1 as
   (lambda (f) (lambda (x) (f ((n f) x)))))
 @end lisp
 
-This representation is known as @newterm{Church numerals}, after its inventor,
+This representation is known as @dfn{Church numerals}, after its inventor,
 Alonzo Church, the logician who invented the @i{[lambda]} calculus.
 
 Define @code{one} and @code{two} directly (not in terms of @code{zero} and
@@ -5991,7 +5991,7 @@ a corresponding subtraction procedure, called @code{sub-interval}.
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 2-9}Exercise 2.9:} The @newterm{width} of an interval
+@strong{@anchor{Exercise 2-9}Exercise 2.9:} The @dfn{width} of an interval
 is half of the difference between its upper and lower bounds.  The width is a
 measure of the uncertainty of the number specified by the interval.  For some
 arithmetic operations the width of the result of combining two intervals is a
@@ -6130,8 +6130,8 @@ task impossible?  (Warning: This problem is very difficult.)
 As we have seen, pairs provide a primitive ``glue'' that we can use to
 construct compound data objects.  @ref{Figure 2-2} shows a standard way to
 visualize a pair---in this case, the pair formed by @code{(cons 1 2)}.  In this
-representation, which is called @newterm{box-and-pointer notation}, each object
-is shown as a @newterm{pointer} to a box.  The box for a primitive object
+representation, which is called @dfn{box-and-pointer notation}, each object
+is shown as a @dfn{pointer} to a box.  The box for a primitive object
 contains a representation of the object.  For example, the box for a number
 contains a numeral.  The box for a pair is actually a double box, the left part
 containing (a pointer to) the @code{car} of the pair and the right part
@@ -6187,7 +6187,7 @@ using pairs.
 
 The ability to create pairs whose elements are pairs is the essence of list
 structure's importance as a representational tool.  We refer to this ability as
-the @newterm{closure property} of @code{cons}.  In general, an operation for
+the @dfn{closure property} of @code{cons}.  In general, an operation for
 combining data objects satisfies the closure property if the results of
 combining things with that operation can themselves be combined using the same
 operation.@footnote{The use of the word ``closure'' here comes from abstract
@@ -6198,7 +6198,7 @@ an element of the set.  The Lisp community also (unfortunately) uses the word
 implementation technique for representing procedures with free variables.  We
 do not use the word ``closure'' in this second sense in this book.  } Closure
 is the key to power in any means of combination because it permits us to create
-@newterm{hierarchical} structures---structures made up of parts, which
+@dfn{hierarchical} structures---structures made up of parts, which
 themselves are made up of parts, and so on.
 
 From the outset of @ref{Chapter 1}, we've made essential use of closure in
@@ -6251,7 +6251,7 @@ a chain of pairs.
 @end quotation
 
 One of the useful structures we can build with pairs is a
-@newterm{sequence}---an ordered collection of data objects.  There are, of
+@dfn{sequence}---an ordered collection of data objects.  There are, of
 course, many ways to represent sequences in terms of pairs.  One particularly
 straightforward representation is illustrated in @ref{Figure 2-4}, where the
 sequence 1, 2, 3, 4 is represented as a chain of pairs.  The @code{car} of each
@@ -6270,10 +6270,10 @@ nested @code{cons} operations:
 @end lisp
 
 Such a sequence of pairs, formed by nested @code{cons}es, is called a
-@newterm{list}, and Scheme provides a primitive called @code{list} to help in
-constructing lists.@footnote{In this book, we use @newterm{list} to mean a
+@dfn{list}, and Scheme provides a primitive called @code{list} to help in
+constructing lists.@footnote{In this book, we use @dfn{list} to mean a
 chain of pairs terminated by the end-of-list marker.  In contrast, the term
-@newterm{list structure} refers to any data structure made out of pairs, not
+@dfn{list structure} refers to any data structure made out of pairs, not
 just to lists.}  The above sequence could be produced by @code{(list 1 2 3 4)}.
 In general,
 
@@ -6347,8 +6347,8 @@ beginning.
 @end lisp
 
 The value of @code{nil}, used to terminate the chain of pairs, can be thought
-of as a sequence of no elements, the @newterm{empty list}.  The word
-@newterm{nil} is a contraction of the Latin word @emph{nihil}, which means
+of as a sequence of no elements, the @dfn{empty list}.  The word
+@dfn{nil} is a contraction of the Latin word @emph{nihil}, which means
 ``nothing.''@footnote{It's remarkable how much energy in the standardization of
 Lisp dialects has been dissipated in arguments that are literally over nothing:
 Should @code{nil} be an ordinary name?  Should the value of @code{nil} be a
@@ -6548,11 +6548,11 @@ affect the answer produced by @code{cc}?  Why or why not?
 @quotation
 @strong{@anchor{Exercise 2-20}Exercise 2.20:} The procedures @code{+},
 @code{*}, and @code{list} take arbitrary numbers of arguments. One way to
-define such procedures is to use @code{define} with @newterm{dotted-tail
+define such procedures is to use @code{define} with @dfn{dotted-tail
 notation}.  In a procedure definition, a parameter list that has a dot before
 the last parameter name indicates that, when the procedure is called, the
 initial parameters (if any) will have as values the initial arguments, as
-usual, but the final parameter's value will be a @newterm{list} of any
+usual, but the final parameter's value will be a @dfn{list} of any
 remaining arguments.  For instance, given the definition
 
 @lisp
@@ -6809,7 +6809,7 @@ this structure in terms of pairs.
 @end quotation
 
 Another way to think of sequences whose elements are sequences is as
-@newterm{trees}.  The elements of the sequence are the branches of the tree,
+@dfn{trees}.  The elements of the sequence are the branches of the tree,
 and elements that are themselves sequences are subtrees.  @ref{Figure 2-6}
 shows the structure in @ref{Figure 2-5} viewed as a tree.
 
@@ -7024,7 +7024,7 @@ Using your selectors, define a procedure @code{total-weight} that returns the
 total weight of a mobile.
 
 @item
-A mobile is said to be @newterm{balanced} if the torque applied by its top-left
+A mobile is said to be @dfn{balanced} if the torque applied by its top-left
 branch is equal to that applied by its top-right branch (that is, if the length
 of the left rod multiplied by the weight hanging from that rod is equal to the
 corresponding product for the right side) and if each of the submobiles hanging
@@ -7139,7 +7139,7 @@ to design programs without becoming enmeshed in the details of data
 representations, and how abstraction preserves for us the flexibility to
 experiment with alternative representations.  In this section, we introduce
 another powerful design principle for working with data structures---the use of
-@newterm{conventional interfaces}.
+@dfn{conventional interfaces}.
 
 In section @ref{1-3} we saw how program abstractions, implemented as
 higher-order procedures, can capture common patterns in programs that deal with
@@ -7216,12 +7216,12 @@ empty list.
 A signal-processing engineer would find it natural to conceptualize these
 processes in terms of signals flowing through a cascade of stages, each of
 which implements part of the program plan, as shown in @ref{Figure 2-7}.  In
-@code{sum-odd-squares}, we begin with an @newterm{enumerator}, which generates
+@code{sum-odd-squares}, we begin with an @dfn{enumerator}, which generates
 a ``signal'' consisting of the leaves of a given tree.  This signal is passed
-through a @newterm{filter}, which eliminates all but the odd elements.  The
-resulting signal is in turn passed through a @newterm{map}, which is a
+through a @dfn{filter}, which eliminates all but the odd elements.  The
+resulting signal is in turn passed through a @dfn{map}, which is a
 ``transducer'' that applies the @code{square} procedure to each element.  The
-output of the map is then fed to an @newterm{accumulator}, which combines the
+output of the map is then fed to an @dfn{accumulator}, which combines the
 elements using @code{+}, starting from an initial 0.  The plan for
 @code{even-fibs} is analogous.
 
@@ -7469,7 +7469,7 @@ a_n r^n | a_(n-1) r^(n-1) + ... + a_1 r + a_0
 @end example
 
 @noindent
-using a well-known algorithm called @newterm{Horner's rule}, which structures
+using a well-known algorithm called @dfn{Horner's rule}, which structures
 the computation as
 
 @example
@@ -7544,7 +7544,7 @@ of @code{accumulate-n}:
 @end lisp
 @end quotation
 
-@subsubheading @anchor{Exercise 2-37}Exercise 2.37
+@strong{@anchor{Exercise 2-37}Exercise 2.37:}
 
 Suppose we represent vectors @i{v} = (@i{v}_@i{i}) as sequences of numbers, and
 matrices @i{m} = (@i{m}_(@i{i}@i{j})) as sequences of vectors (the rows of the
@@ -7749,7 +7749,7 @@ elements of @i{S}, excluding @i{x}.} and adjoin @i{x} to the front of each one.
 This yields, for each @i{x} in @i{S}, the sequence of permutations of @i{S}
 that begin with @i{x}.  Combining these sequences for all @i{x} gives all the
 permutations of @i{S}:@footnote{Semicolons in Scheme code are used to introduce
-@newterm{comments}.  Everything from the semicolon to the end of the line is
+@dfn{comments}.  Everything from the semicolon to the end of the line is
 ignored by the interpreter.  In this book we don't use many comments; we try to
 make our programs self-documenting by using descriptive names.}
 
@@ -7922,7 +7922,7 @@ its means of combination, and its means of abstraction.  We'll follow that
 framework here.
 
 Part of the elegance of this picture language is that there is only one kind of
-element, called a @newterm{painter}.  A painter draws an image that is shifted
+element, called a @dfn{painter}.  A painter draws an image that is shifted
 and scaled to fit within a designated parallelogram-shaped frame.  For example,
 there's a primitive painter we'll call @code{wave} that makes a crude line
 drawing, as shown in @ref{Figure 2-10}.  The actual shape of the drawing
@@ -8262,7 +8262,7 @@ vector    \    __--        edge1
 @end quotation
 
 We will use coordinates in the unit square (0<= @i{x},@i{y}<= 1) to specify
-images.  With each frame, we associate a @newterm{frame coordinate map}, which
+images.  With each frame, we associate a @dfn{frame coordinate map}, which
 will be used to shift and scale images to fit the frame.  The map transforms
 the unit square into the frame by mapping the vector @i{v} = (@i{x},@i{y}) to
 the vector sum
@@ -8555,7 +8555,7 @@ build up complex designs.  Finally, all the tools for abstracting procedures
 are available to us for abstracting means of combination for painters.
 
 We have also obtained a glimpse of another crucial idea about languages and
-program design.  This is the approach of @newterm{stratified design}, the
+program design.  This is the approach of @dfn{stratified design}, the
 notion that a complex system should be structured as a sequence of levels that
 are described using a sequence of languages.  Each level is constructed by
 combining parts that are regarded as primitive at that level, and the parts
@@ -8584,7 +8584,7 @@ combining these primitives, using geometric combiners such as @code{beside} and
 such as @code{square-of-four}, capture common patterns of combining geometric
 combiners.
 
-Stratified design helps make programs @newterm{robust}, that is, it makes it
+Stratified design helps make programs @dfn{robust}, that is, it makes it
 likely that small changes in a specification will require correspondingly small
 changes in the program.  For instance, suppose we wanted to change the image
 based on @code{wave} shown in @ref{Figure 2-9}.  We could work at the lowest
@@ -8654,9 +8654,9 @@ language:
 @end lisp
 
 In order to manipulate symbols we need a new element in our language: the
-ability to @newterm{quote} a data object.  Suppose we want to construct the
+ability to @dfn{quote} a data object.  Suppose we want to construct the
 list @code{(a b)}.  We can't accomplish this with @code{(list a b)}, because
-this expression constructs a list of the @newterm{values} of @code{a} and
+this expression constructs a list of the @dfn{values} of @code{a} and
 @code{b} rather than the symbols themselves.  This issue is well known in the
 context of natural languages, where words and sentences may be regarded either
 as semantic entities or as character strings (syntactic entities).  The common
@@ -9510,8 +9510,8 @@ Then we can perform this transformation after every few @code{adjoin-set}
 operations to keep our set in balance.  There are also other ways to solve this
 problem, most of which involve designing new data structures for which
 searching and insertion both can be done in @i{[theta]}(@code{log} @i{n})
-steps.@footnote{Examples of such structures include @newterm{B-trees} and
-@newterm{red-black trees}.  There is a large literature on data structures
+steps.@footnote{Examples of such structures include @dfn{B-trees} and
+@dfn{red-black trees}.  There is a large literature on data structures
 devoted to this problem.  See Cormen, Leiserson, and Rivest 1990.}
 
 @quotation
@@ -9636,7 +9636,7 @@ the personnel files for a company or the transactions in an accounting system.
 A typical data-management system spends a large amount of time accessing or
 modifying the data in the records and therefore requires an efficient method
 for accessing records.  This is done by identifying a part of each record to
-serve as an identifying @newterm{key}.  A key can be anything that uniquely
+serve as an identifying @dfn{key}.  A key can be anything that uniquely
 identifies the record.  For a personnel file, it might be an employee's ID
 number.  For an accounting system, it might be a transaction number.  Whatever
 the key is, when we define the record as a data structure we should include a
@@ -9706,9 +9706,9 @@ is encoded as the string of 54 bits
 001000010000011000100000101000001001000000000110000111
 
 Codes such as ASCII and the A-through-H code above are known as
-@newterm{fixed-length} codes, because they represent each symbol in the message
+@dfn{fixed-length} codes, because they represent each symbol in the message
 with the same number of bits.  It is sometimes advantageous to use
-@newterm{variable-length} codes, in which different symbols may be represented
+@dfn{variable-length} codes, in which different symbols may be represented
 by different numbers of bits.  For example, Morse code does not use the same
 number of dots and dashes for each letter of the alphabet.  In particular, E,
 the most frequent letter, is represented by a single dot.  In general, if our
@@ -9732,11 +9732,11 @@ with the fixed-length code shown above.
 
 One of the difficulties of using a variable-length code is knowing when you
 have reached the end of a symbol in reading a sequence of zeros and ones.
-Morse code solves this problem by using a special @newterm{separator code} (in
+Morse code solves this problem by using a special @dfn{separator code} (in
 this case, a pause) after the sequence of dots and dashes for each letter.
 Another solution is to design the code in such a way that no complete code for
-any symbol is the beginning (or @newterm{prefix}) of the code for another
-symbol.  Such a code is called a @newterm{prefix code}.  In the example above,
+any symbol is the beginning (or @dfn{prefix}) of the code for another
+symbol.  Such a code is called a @dfn{prefix code}.  In the example above,
 A is encoded by 0 and B is encoded by 100, so no other symbol can have a code
 that begins with 0 or with 100.
 
@@ -9902,7 +9902,7 @@ If we make a tree in this way, we have the following selectors:
 
 The procedures @code{symbols} and @code{weight} must do something slightly
 different depending on whether they are called with a leaf or a general tree.
-These are simple examples of @newterm{generic procedures} (procedures that can
+These are simple examples of @dfn{generic procedures} (procedures that can
 handle more than one kind of data), which we will have much more to say about
 in sections @ref{2-4} and @ref{2-5}.
 
@@ -10138,16 +10138,16 @@ abstraction barriers that isolate different design choices from each other and
 permit different choices to coexist in a single program.  Furthermore, since
 large programs are often created by combining pre-existing modules that were
 designed in isolation, we need conventions that permit programmers to
-incorporate modules into larger systems @newterm{additively}, that is, without
+incorporate modules into larger systems @dfn{additively}, that is, without
 having to redesign or reimplement these modules.
 
 In this section, we will learn how to cope with data that may be represented in
 different ways by different parts of a program.  This requires constructing
-@newterm{generic procedures}---procedures that can operate on data that may be
+@dfn{generic procedures}---procedures that can operate on data that may be
 represented in more than one way.  Our main technique for building generic
-procedures will be to work in terms of data objects that have @newterm{type
+procedures will be to work in terms of data objects that have @dfn{type
 tags}, that is, data objects that include explicit information about how they
-are to be processed.  We will also discuss @newterm{data-directed} programming,
+are to be processed.  We will also discuss @dfn{data-directed} programming,
 a powerful and convenient implementation strategy for additively assembling
 systems with generic operations.
 
@@ -10414,7 +10414,7 @@ in polar form from data in rectangular form.  Otherwise, if we were asked, for
 instance, to find the @code{magnitude} of the pair (3,4), we wouldn't know
 whether to answer 5 (interpreting the number in rectangular form) or 3
 (interpreting the number in polar form).  A straightforward way to accomplish
-this distinction is to include a @newterm{type tag}---the symbol
+this distinction is to include a @dfn{type tag}---the symbol
 @code{rectangular} or @code{polar}---as part of each complex number.  Then
 when we need to manipulate a complex number we can use the tag to decide which
 selector to apply.
@@ -10616,7 +10616,7 @@ organizational strategy, as we shall see in section @ref{2-5}.
 @subsection Data-Directed Programming and Additivity
 
 The general strategy of checking the type of a datum and calling an appropriate
-procedure is called @newterm{dispatching on type}.  This is a powerful strategy
+procedure is called @dfn{dispatching on type}.  This is a powerful strategy
 for obtaining modularity in system design.  Oh the other hand, implementing the
 dispatch as in section @ref{2-4-2} has two significant weaknesses.  One
 weakness is that the generic interface procedures (@code{real-part},
@@ -10633,7 +10633,7 @@ procedures in the entire system have the same name.  This is why Ben and Alyssa
 had to change the names of their original procedures from section @ref{2-4-1}.
 
 The issue underlying both of these weaknesses is that the technique for
-implementing generic interfaces is not @newterm{additive}.  The person
+implementing generic interfaces is not @dfn{additive}.  The person
 implementing the generic selector procedures must modify those procedures each
 time a new representation is installed, and the people interfacing the
 individual representations must modify their code to avoid name conflicts.  In
@@ -10648,7 +10648,7 @@ representations.  The problem is real and must be addressed in such programs as
 large-scale data-base-management systems.
 
 What we need is a means for modularizing the system design even further.  This
-is provided by the programming technique known as @newterm{data-directed
+is provided by the programming technique known as @dfn{data-directed
 programming}.  To understand how data-directed programming works, begin with
 the observation that whenever we deal with a set of generic operations that are
 common to a set of different types we are, in effect, dealing with a
@@ -10711,7 +10711,7 @@ will see how to implement these and other operations for manipulating tables.
 Here is how data-directed programming can be used in the complex-number system.
 Ben, who developed the rectangular representation, implements his code just as
 he did originally.  He defines a collection of procedures, or a
-@newterm{package}, and interfaces these to the rest of the system by adding
+@dfn{package}, and interfaces these to the rest of the system by adding
 entries to the table that tell the system how to operate on rectangular
 numbers.  This is accomplished by calling the following procedure:
 
@@ -11013,7 +11013,7 @@ Note that the value returned by @code{make-from-real-imag} is a procedure---the
 internal @code{dispatch} procedure.  This is the procedure that is invoked when
 @code{apply-generic} requests an operation to be performed.
 
-This style of programming is called @newterm{message passing}.  The name comes
+This style of programming is called @dfn{message passing}.  The name comes
 from the image that a data object is an entity that receives the requested
 operation name as a ``message.''  We have already seen an example of message
 passing in section @ref{2-1-3}, where we saw how @code{cons}, @code{car}, and
@@ -11122,7 +11122,7 @@ The generic arithmetic procedures are defined as follows:
 (define (div x y) (apply-generic 'div x y))
 @end lisp
 
-We begin by installing a package for handling @newterm{ordinary} numbers, that
+We begin by installing a package for handling @dfn{ordinary} numbers, that
 is, the primitive numbers of our language.  We will tag these with the symbol
 @code{scheme-number}.  The arithmetic operations in this package are the
 primitive arithmetic procedures (so there is no need to define extra procedures
@@ -11409,7 +11409,7 @@ cumbersome though it may be, is the best that one can hope for.  Fortunately,
 we can usually do better by taking advantage of additional structure that may
 be latent in our type system.  Often the different data types are not
 completely independent, and there may be ways by which objects of one type may
-be viewed as being of another type.  This process is called @newterm{coercion}.
+be viewed as being of another type.  This process is called @dfn{coercion}.
 For example, if we are asked to arithmetically combine an ordinary number with
 a complex number, we can view the ordinary number as a complex number whose
 imaginary part is zero.  This transforms the problem to that of combining two
@@ -11514,13 +11514,13 @@ building a generic arithmetic system to handle integers, rational numbers, real
 numbers, and complex numbers.  In such a system, it is quite natural to regard
 an integer as a special kind of rational number, which is in turn a special
 kind of real number, which is in turn a special kind of complex number.  What
-we actually have is a so-called @newterm{hierarchy of types}, in which, for
-example, integers are a @newterm{subtype} of rational numbers (i.e., any
+we actually have is a so-called @dfn{hierarchy of types}, in which, for
+example, integers are a @dfn{subtype} of rational numbers (i.e., any
 operation that can be applied to a rational number can automatically be applied
 to an integer).  Conversely, we say that rational numbers form a
-@newterm{supertype} of integers.  The particular hierarchy we have here is of a
+@dfn{supertype} of integers.  The particular hierarchy we have here is of a
 very simple kind, in which each type has at most one supertype and at most one
-subtype.  Such a structure, called a @newterm{tower}, is illustrated in
+subtype.  Such a structure, called a @dfn{tower}, is illustrated in
 @ref{Figure 2-25}.
 
 @quotation
@@ -11645,7 +11645,7 @@ work in knowledge representation and automated reasoning.}
 @strong{@anchor{Exercise 2-81}Exercise 2.81:} Louis Reasoner has noticed that
 @code{apply-generic} may try to coerce the arguments to each other's type even
 if they already have the same type.  Therefore, he reasons, we need to put
-procedures in the coercion table to @newterm{coerce} arguments of each type to
+procedures in the coercion table to @dfn{coerce} arguments of each type to
 their own type.  For example, in addition to the
 @code{scheme-number->complex} coercion shown above, he would do:
 
@@ -11793,9 +11793,9 @@ this effort.
 
 Our first task in designing a system for performing arithmetic on polynomials
 is to decide just what a polynomial is.  Polynomials are normally defined
-relative to certain variables (the @newterm{indeterminates} of the polynomial).
+relative to certain variables (the @dfn{indeterminates} of the polynomial).
 For simplicity, we will restrict ourselves to polynomials having just one
-indeterminate (@newterm{univariate polynomials}).@footnote{On the other hand,
+indeterminate (@dfn{univariate polynomials}).@footnote{On the other hand,
 we will allow polynomials whose coefficients are themselves polynomials in
 other variables.  This will give us essentially the same representational power
 as a full multivariate system, although it does lead to coercion problems, as
@@ -11846,7 +11846,7 @@ indeterminate.
 
 We will approach the design of our system by following the familiar discipline
 of data abstraction.  We will represent polynomials using a data structure
-called a @newterm{poly}, which consists of a variable and a collection of
+called a @dfn{poly}, which consists of a variable and a collection of
 terms.  We assume that we have selectors @code{variable} and @code{term-list}
 that extract those parts from a poly and a constructor @code{make-poly} that
 assembles a poly from a given variable and a term list.  A variable will be
@@ -12042,9 +12042,9 @@ of ordered list representation.
 
 How should we structure the list that represents a term list?  One
 consideration is the ``density'' of the polynomials we intend to manipulate.  A
-polynomial is said to be @newterm{dense} if it has nonzero coefficients in
+polynomial is said to be @dfn{dense} if it has nonzero coefficients in
 terms of most orders.  If it has many zero terms it is said to be
-@newterm{sparse}.  For example,
+@dfn{sparse}.  For example,
 
 @example
 A : x^5 + 2x^4 + 3x^2 - 2x - 5
@@ -12244,7 +12244,7 @@ polynomials works for polynomials in different variables.  (This is not easy!)
 
 @subsubheading Extended exercise: Rational functions
 
-We can extend our generic arithmetic system to include @newterm{rational
+We can extend our generic arithmetic system to include @dfn{rational
 functions}.  These are ``fractions'' whose numerator and denominator are
 polynomials, such as
 
@@ -12294,7 +12294,7 @@ divisor'' makes sense for polynomials.  In fact, we can compute the
 @acronym{GCD} of two polynomials using essentially the same Euclid's Algorithm
 that works for integers.@footnote{The fact that Euclid's Algorithm works for
 polynomials is formalized in algebra by saying that polynomials form a kind of
-algebraic domain called a @newterm{Euclidean ring}.  A Euclidean ring is a
+algebraic domain called a @dfn{Euclidean ring}.  A Euclidean ring is a
 domain that admits addition, subtraction, and commutative multiplication,
 together with a way of assigning to each element @i{x} of the ring a positive
 integer ``measure'' @i{m}(@i{x}) with the properties that @i{m}(@i{x}@i{y})>=
@@ -12387,12 +12387,12 @@ factor will cancel out.
 More precisely, if @i{P} and @i{Q} are polynomials, let @i{O}_1 be the order of
 @i{P} (i.e., the order of the largest term of @i{P}) and let @i{O}_2 be the
 order of @i{Q}.  Let @i{c} be the leading coefficient of @i{Q}.  Then it can be
-shown that, if we multiply @i{P} by the @newterm{integerizing factor}
+shown that, if we multiply @i{P} by the @dfn{integerizing factor}
 @i{c}^(1+@i{O}_1 -@i{O}_2), the resulting polynomial can be divided by @i{Q} by
 using the @code{div-terms} algorithm without introducing any fractions.  The
 operation of multiplying the dividend by this constant and then dividing is
-sometimes called the @newterm{pseudodivision} of @i{P} by @i{Q}.  The remainder
-of the division is called the @newterm{pseudoremainder}.
+sometimes called the @dfn{pseudodivision} of @i{P} by @i{Q}.  The remainder
+of the division is called the @dfn{pseudoremainder}.
 @end quotation
 
 @quotation
@@ -12531,7 +12531,7 @@ helping us to cope with the complexity of large systems.  But these tools are
 not sufficient for designing programs.  Effective program synthesis also
 requires organizational principles that can guide us in formulating the overall
 design of a program.  In particular, we need strategies to help us structure
-large systems so that they will be @newterm{modular}, that is, so that they can
+large systems so that they will be @dfn{modular}, that is, so that they can
 be divided ``naturally'' into coherent parts that can be separately developed
 and maintained.
 
@@ -12551,9 +12551,9 @@ To a large extent, then, the way we organize a large program is dictated by our
 perception of the system to be modeled.  In this chapter we will investigate
 two prominent organizational strategies arising from two rather different
 ``world views'' of the structure of systems.  The first organizational strategy
-concentrates on @newterm{objects}, viewing a large system as a collection of
+concentrates on @dfn{objects}, viewing a large system as a collection of
 distinct objects whose behaviors may change over time.  An alternative
-organizational strategy concentrates on the @newterm{streams} of information
+organizational strategy concentrates on the @dfn{streams} of information
 that flow in the system, much as an electrical engineer views a
 signal-processing system.
 
@@ -12562,14 +12562,14 @@ significant linguistic issues in programming.  With objects, we must be
 concerned with how a computational object can change and yet maintain its
 identity.  This will force us to abandon our old substitution model of
 computation (section @ref{1-1-5}) in favor of a more mechanistic but less
-theoretically tractable @newterm{environment model} of computation.  The
+theoretically tractable @dfn{environment model} of computation.  The
 difficulties of dealing with objects, change, and identity are a fundamental
 consequence of the need to grapple with time in our computational models.
 These difficulties become even greater when we allow the possibility of
 concurrent execution of programs.  The stream approach can be most fully
 exploited when we decouple simulated time in our model from the order of the
 events that take place in the computer during evaluation.  We will accomplish
-this using a technique known as @newterm{delayed evaluation}.
+this using a technique known as @dfn{delayed evaluation}.
 
 @menu
 * 3-1::              Assignment and Local State
@@ -12587,7 +12587,7 @@ has a state that changes over time.  An object is said to ``have state'' if its
 behavior is influenced by its history.  A bank account, for example, has state
 in that the answer to the question ``Can I withdraw $100?''  depends upon the
 history of deposit and withdrawal transactions.  We can characterize an
-object's state by one or more @newterm{state variables}, which among them
+object's state by one or more @dfn{state variables}, which among them
 maintain enough information about history to determine the object's current
 behavior.  In a simple banking system, we could characterize the state of an
 account by a current balance rather than by remembering the entire history of
@@ -12603,14 +12603,14 @@ coupled subsystems that are only loosely coupled to other subsystems.
 This view of a system can be a powerful framework for organizing computational
 models of the system.  For such a model to be modular, it should be decomposed
 into computational objects that model the actual objects in the system.  Each
-computational object must have its own @newterm{local state variables}
+computational object must have its own @dfn{local state variables}
 describing the actual object's state.  Since the states of objects in the
 system being modeled change over time, the state variables of the corresponding
 computational objects must also change.  If we choose to model the flow of time
 in the system by the elapsed time in the computer, then we must have a way to
 construct computational objects whose behaviors change as our programs run.  In
 particular, if we wish to model state variables by ordinary symbolic names in
-the programming language, then the language must provide an @newterm{assignment
+the programming language, then the language must provide an @dfn{assignment
 operator} to enable us to change the value associated with a name.
 
 @menu
@@ -12754,9 +12754,9 @@ procedure.  This procedure---returned as the result of evaluating the
 @code{let} expression---is @code{new-withdraw}, which behaves in precisely the
 same way as @code{withdraw} but whose variable @code{balance} is not accessible
 by any other procedure.@footnote{In programming-language jargon, the variable
-@code{balance} is said to be @newterm{encapsulated} within the
+@code{balance} is said to be @dfn{encapsulated} within the
 @code{new-withdraw} procedure.  Encapsulation reflects the general
-system-design principle known as the @newterm{hiding principle}: One can make a
+system-design principle known as the @dfn{hiding principle}: One can make a
 system more modular and robust by protecting parts of the system from each
 other; that is, by providing information access only to those parts of the
 system that have a ``need to know.''}
@@ -12847,7 +12847,7 @@ procedures @code{deposit} and @code{withdraw} that access @code{balance} and an
 additional procedure @code{dispatch} that takes a ``message'' as input and
 returns one of the two local procedures.  The @code{dispatch} procedure itself
 is returned as the value that represents the bank-account object.  This is
-precisely the @newterm{message-passing} style of programming that we saw in
+precisely the @dfn{message-passing} style of programming that we saw in
 section @ref{2-4-3}, although here we are using it in conjunction with the
 ability to modify local variables.
 
@@ -12883,7 +12883,7 @@ will produce a completely separate account object, which maintains its own
 local @code{balance}.
 
 @quotation
-@strong{@anchor{Exercise 3-1}Exercise 3.1:} An @newterm{accumulator} is a
+@strong{@anchor{Exercise 3-1}Exercise 3.1:} An @dfn{accumulator} is a
 procedure that is called repeatedly with a single numeric argument and
 accumulates its arguments into a sum.  Each time it is called, it returns the
 currently accumulated sum.  Write a procedure @code{make-accumulator} that
@@ -12990,7 +12990,7 @@ a mathematical function: Given the same input twice, it produces the same
 output.  Therefore, the number sequence produced by @code{rand-update}
 certainly is not ``random,'' if by ``random'' we insist that each number in the
 sequence is unrelated to the preceding number.  The relation between ``real
-randomness'' and so-called @newterm{pseudo-random} sequences, which are
+randomness'' and so-called @dfn{pseudo-random} sequences, which are
 produced by well-determined computations and yet have suitable statistical
 properties, is a complex question involving difficult issues in mathematics and
 philosophy.  Kolmogorov, Solomonoff, and Chaitin have made great progress in
@@ -13015,7 +13015,7 @@ assignment by simply calling @code{rand-update} directly.  However, this would
 mean that any part of our program that used random numbers would have to
 explicitly remember the current value of @code{x} to be passed as an argument
 to @code{rand-update}.  To realize what an annoyance this would be, consider
-using random numbers to implement a technique called @newterm{Monte Carlo
+using random numbers to implement a technique called @dfn{Monte Carlo
 simulation}.
 
 The Monte Carlo method consists of choosing sample experiments at random from a
@@ -13115,7 +13115,7 @@ manipulated explicitly, by passing additional parameters.  Unfortunately, as we
 shall see, the story is not so simple.
 
 @quotation
-@strong{@anchor{Exercise 3-5}Exercise 3.5:} @newterm{Monte Carlo integration}
+@strong{@anchor{Exercise 3-5}Exercise 3.5:} @dfn{Monte Carlo integration}
 is a method of estimating definite integrals by means of Monte Carlo
 simulation.  Consider computing the area of a region of space described by a
 predicate @i{P}(@i{x}, @i{y}) that is true for points (@i{x}, @i{y}) in the
@@ -13184,7 +13184,7 @@ So long as we do not use assignments, two evaluations of the same procedure
 with the same arguments will produce the same result, so that procedures can be
 viewed as computing mathematical functions.  Programming without any use of
 assignments, as we did throughout the first two chapters of this book, is
-accordingly known as @newterm{functional programming}.
+accordingly known as @dfn{functional programming}.
 
 To understand how assignment complicates matters, consider a simplified version
 of the @code{make-withdraw} procedure of section @ref{3-1-1} that does not
@@ -13344,7 +13344,7 @@ expression without changing the result of evaluating the expression.
 
 A language that supports the concept that ``equals can be substituted for
 equals'' in an expresssion without changing the value of the expression is said
-to be @newterm{referentially transparent}.  Referential transparency is
+to be @dfn{referentially transparent}.  Referential transparency is
 violated when we include @code{set!} in our computer language.  This makes it
 tricky to determine when we can simplify expressions by substituting equivalent
 expressions.  Consequently, reasoning about programs that use assignment
@@ -13391,14 +13391,14 @@ account) that has two different names (@code{peter-acc} and @code{paul-acc});
 if we are searching for all the places in our program where @code{paul-acc} can
 be changed, we must remember to look also at things that change
 @code{peter-acc}.@footnote{The phenomenon of a single computational object
-being accessed by more than one name is known as @newterm{aliasing}.  The joint
+being accessed by more than one name is known as @dfn{aliasing}.  The joint
 bank account situation illustrates a very simple example of an alias.  In
 section @ref{3-3} we will see much more complex examples, such as ``distinct''
 compound data structures that share parts.  Bugs can occur in our programs if
 we forget that a change to an object may also, as a ``side effect,'' change a
 ``different'' object because the two ``different'' objects are actually a
 single object appearing under different aliases.  These so-called
-@newterm{side-effect bugs} are so difficult to locate and to analyze that some
+@dfn{side-effect bugs} are so difficult to locate and to analyze that some
 people have proposed that programming languages be designed in such a way as to
 not allow side effects or aliasing (Lampson et al. 1981; Morris, Schmidt, and
 Wadler 1980).}
@@ -13423,7 +13423,7 @@ rational number.
 @subsubheading Pitfalls of imperative programming
 
 In contrast to functional programming, programming that makes extensive use of
-assignment is known as @newterm{imperative programming}.  In addition to
+assignment is known as @dfn{imperative programming}.  In addition to
 raising complications about computational models, programs written in
 imperative style are susceptible to bugs that cannot occur in functional
 programs.  For example, recall the iterative factorial program from section
@@ -13543,18 +13543,18 @@ longer adequate.  In particular, section @ref{3-1-3} argued that, in the
 presence of assignment, a variable can no longer be considered to be merely a
 name for a value.  Rather, a variable must somehow designate a ``place'' in
 which values can be stored.  In our new model of evaluation, these places will
-be maintained in structures called @newterm{environments}.
+be maintained in structures called @dfn{environments}.
 
-An environment is a sequence of @newterm{frames}.  Each frame is a table
-(possibly empty) of @newterm{bindings}, which associate variable names with
+An environment is a sequence of @dfn{frames}.  Each frame is a table
+(possibly empty) of @dfn{bindings}, which associate variable names with
 their corresponding values.  (A single frame may contain at most one binding
-for any variable.)  Each frame also has a pointer to its @newterm{enclosing
+for any variable.)  Each frame also has a pointer to its @dfn{enclosing
 environment}, unless, for the purposes of discussion, the frame is considered
-to be @newterm{global}.  The @newterm{value of a variable} with respect to an
+to be @dfn{global}.  The @dfn{value of a variable} with respect to an
 environment is the value given by the binding of the variable in the first
 frame in the environment that contains a binding for that variable.  If no
 frame in the sequence specifies a binding for the variable, then the variable
-is said to be @newterm{unbound} in the environment.
+is said to be @dfn{unbound} in the environment.
 
 @quotation
 @strong{@anchor{Figure 3-1}Figure 3.1:} A simple environment structure.
@@ -13587,7 +13587,7 @@ for @code{x}, so we proceed to the enclosing environment D and find the binding
 in frame I.  On the other hand, the value of @code{x} in environment A is 7,
 because the first frame in the sequence (frame II) contains a binding of
 @code{x} to 7.  With respect to environment A, the binding of @code{x} to 7 in
-frame II is said to @newterm{shadow} the binding of @code{x} to 3 in frame I.
+frame II is said to @dfn{shadow} the binding of @code{x} to 3 in frame I.
 
 The environment is crucial to the evaluation process, because it determines the
 context in which an expression should be evaluated.  Indeed, one could say that
@@ -14409,7 +14409,7 @@ objects that have changing state leads us to the need to modify compound data
 objects, as well as to construct and select from them.  In order to model
 compound objects with changing state, we will design data abstractions to
 include, in addition to selectors and constructors, operations called
-@newterm{mutators}, which modify data objects.  For instance, modeling a
+@dfn{mutators}, which modify data objects.  For instance, modeling a
 banking system requires us to change account balances.  Thus, a data structure
 for representing bank accounts might admit an operation
 
@@ -14419,7 +14419,7 @@ for representing bank accounts might admit an operation
 
 @noindent
 that changes the balance of the designated account to the designated new value.
-Data objects for which mutators are defined are known as @newterm{mutable data
+Data objects for which mutators are defined are known as @dfn{mutable data
 objects}.
 
 @ref{Chapter 2} introduced pairs as a general-purpose ``glue'' for synthesizing
@@ -14581,7 +14581,7 @@ representing the list @code{(a b)}, identified by the pointer that was
 replaced, are now detached from the original structure.@footnote{We see from
 this that mutation operations on lists can create ``garbage'' that is not part
 of any accessible structure.  We will see in section @ref{5-3-2} that Lisp
-memory-management systems include a @newterm{garbage collector}, which
+memory-management systems include a @dfn{garbage collector}, which
 identifies and recycles the memory space used by unneeded pairs.}
 
 Compare @ref{Figure 3-13} with @ref{Figure 3-14}, which illustrates the result
@@ -14728,7 +14728,7 @@ and @code{w}?
 
 We mentioned in section @ref{3-1-3} the theoretical issues of ``sameness'' and
 ``change'' raised by the introduction of assignment.  These issues arise in
-practice when individual pairs are @newterm{shared} among different data
+practice when individual pairs are @dfn{shared} among different data
 objects.  For example, consider the structure formed by
 
 @lisp
@@ -14991,13 +14991,13 @@ and @code{cdr} alone.  This section shows how to use pairs to represent a data
 structure called a queue.  Section @ref{3-3-3} will show how to represent data
 structures called tables.
 
-A @newterm{queue} is a sequence in which items are inserted at one end (called
-the @newterm{rear} of the queue) and deleted from the other end (the
-@newterm{front}).  @ref{Figure 3-18} shows an initially empty queue in which
+A @dfn{queue} is a sequence in which items are inserted at one end (called
+the @dfn{rear} of the queue) and deleted from the other end (the
+@dfn{front}).  @ref{Figure 3-18} shows an initially empty queue in which
 the items @code{a} and @code{b} are inserted.  Then @code{a} is removed,
 @code{c} and @code{d} are inserted, and @code{b} is removed.  Because items are
 always removed in the order in which they are inserted, a queue is sometimes
-called a @newterm{FIFO} (first in, first out) buffer.
+called a @dfn{FIFO} (first in, first out) buffer.
 
 @quotation
 @strong{@anchor{Figure 3-18}Figure 3.18:} Queue operations.
@@ -15283,7 +15283,7 @@ queue operations using this representation.
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 3-23}Exercise 3.23:} A @newterm{deque} (``double-ended
+@strong{@anchor{Exercise 3-23}Exercise 3.23:} A @dfn{deque} (``double-ended
 queue'') is a sequence in which items can be inserted and deleted at either the
 front or the rear.  Operations on deques are the constructor @code{make-deque},
 the predicate @code{empty-deque?}, selectors @code{front-deque} and
@@ -15309,9 +15309,9 @@ We first consider a one-dimensional table, in which each value is stored under
 a single key.  We implement the table as a list of records, each of which is
 implemented as a pair consisting of a key and the associated value. The records
 are glued together to form a list by pairs whose @code{car}s point to
-successive records.  These gluing pairs are called the @newterm{backbone} of
+successive records.  These gluing pairs are called the @dfn{backbone} of
 the table.  In order to have a place that we can change when we add a new
-record to the table, we build the table as a @newterm{headed list}.  A headed
+record to the table, we build the table as a @dfn{headed list}.  A headed
 list has a special backbone pair at the beginning, which holds a dummy
 ``record''---in this case the arbitrarily chosen symbol @code{*table*}.
 @ref{Figure 3-22} shows the box-and-pointer diagram for the table
@@ -15581,8 +15581,8 @@ or alphabetically).  (Compare @ref{Exercise 2-66} of @ref{Chapter 2}.)
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 3-27}Exercise 3.27:} @newterm{Memoization} (also
-called @newterm{tabulation}) is a technique that enables a procedure to record,
+@strong{@anchor{Exercise 3-27}Exercise 3.27:} @dfn{Memoization} (also
+called @dfn{tabulation}) is a technique that enables a procedure to record,
 in a local table, values that have previously been computed.  This technique
 can make a vast difference in the performance of a program.  A memoized
 procedure maintains a table in which values of previous calls are stored using
@@ -15642,30 +15642,30 @@ networks of them can have very complex behavior.  Computer simulation of
 proposed circuit designs is an important tool used by digital systems
 engineers.  In this section we design a system for performing digital logic
 simulations.  This system typifies a kind of program called an
-@newterm{event-driven simulation}, in which actions (``events'') trigger
+@dfn{event-driven simulation}, in which actions (``events'') trigger
 further events that happen at a later time, which in turn trigger more events,
 and so so.
 
 Our computational model of a circuit will be composed of objects that
 correspond to the elementary components from which the circuit is constructed.
-There are @newterm{wires}, which carry @newterm{digital signals}.  A digital
+There are @dfn{wires}, which carry @dfn{digital signals}.  A digital
 signal may at any moment have only one of two possible values, 0 and 1.  There
-are also various types of digital @newterm{function boxes}, which connect wires
+are also various types of digital @dfn{function boxes}, which connect wires
 carrying input signals to other output wires.  Such boxes produce output
 signals computed from their input signals.  The output signal is delayed by a
 time that depends on the type of the function box.  For example, an
-@newterm{inverter} is a primitive function box that inverts its input.  If the
+@dfn{inverter} is a primitive function box that inverts its input.  If the
 input signal to an inverter changes to 0, then one inverter-delay later the
 inverter will change its output signal to 1.  If the input signal to an
 inverter changes to 1, then one inverter-delay later the inverter will change
 its output signal to 0.  We draw an inverter symbolically as in @ref{Figure
-3-24}.  An @newterm{and-gate}, also shown in @ref{Figure 3-24}, is a primitive
+3-24}.  An @dfn{and-gate}, also shown in @ref{Figure 3-24}, is a primitive
 function box with two inputs and one output.  It drives its output signal to a
-value that is the @newterm{logical and} of the inputs.  That is, if both of its
+value that is the @dfn{logical and} of the inputs.  That is, if both of its
 input signals become 1, then one and-gate-delay time later the and-gate will
 force its output signal to be 1; otherwise the output will be 0.  An
-@newterm{or-gate} is a similar two-input primitive function box that drives its
-output signal to a value that is the @newterm{logical or} of the inputs.  That
+@dfn{or-gate} is a similar two-input primitive function box that drives its
+output signal to a value that is the @dfn{logical or} of the inputs.  That
 is, the output will become 1 if at least one of the input signals is 1;
 otherwise the output will become 0.
 
@@ -15685,7 +15685,7 @@ Inverter    And-gate     Or-gate
 
 We can connect primitive functions together to construct more complex
 functions.  To accomplish this we wire the outputs of some function boxes to
-the inputs of other function boxes.  For example, the @newterm{half-adder}
+the inputs of other function boxes.  For example, the @dfn{half-adder}
 circuit shown in @ref{Figure 3-25} consists of an or-gate, two and-gates, and
 an inverter.  It takes two input signals, A and B, and has two output signals,
 S and C.  S will become 1 whenever precisely one of A and B is 1, and C will
@@ -15767,7 +15767,7 @@ to be attached to the half-adder:
 
 The advantage of making this definition is that we can use @code{half-adder}
 itself as a building block in creating more complex circuits.  @ref{Figure
-3-26}, for example, shows a @newterm{full-adder} composed of two half-adders
+3-26}, for example, shows a @dfn{full-adder} composed of two half-adders
 and an or-gate.@footnote{A full-adder is a basic circuit element used in adding
 two binary numbers.  Here A and B are the bits at corresponding positions in
 the two numbers to be added, and C_(@i{i}@i{n}) is the carry bit from the
@@ -15914,7 +15914,7 @@ the delay time of the or-gate in terms of @code{and-gate-delay} and
 
 @quotation
 @strong{@anchor{Exercise 3-30}Exercise 3.30:} @ref{Figure 3-27} shows a
-@newterm{ripple-carry adder} formed by stringing together @i{n} full-adders.
+@dfn{ripple-carry adder} formed by stringing together @i{n} full-adders.
 This is the simplest form of parallel adder for adding two @i{n}-bit binary
 numbers.  The inputs A_1, A_2, A_3, @dots{}, A_@i{n} and B_1, B_2, B_3,
 @dots{}, B_@i{n} are the two binary numbers to be added (each A_@i{k} and
@@ -16040,7 +16040,7 @@ connections were established.
 @subsubheading The agenda
 
 The only thing needed to complete the simulator is @code{after-delay}.  The
-idea here is that we maintain a data structure, called an @newterm{agenda},
+idea here is that we maintain a data structure, called an @dfn{agenda},
 that contains a schedule of things to do.  The following operations are defined
 for agendas:
 
@@ -16192,7 +16192,7 @@ would differ if we had defined @code{accept-action-procedure!} as
 Finally, we give details of the agenda data structure, which holds the
 procedures that are scheduled for future execution.
 
-The agenda is made up of @newterm{time segments}.  Each time segment is a pair
+The agenda is made up of @dfn{time segments}.  Each time segment is a pair
 consisting of a number (the time) and a queue (see @ref{Exercise 3-32}) that
 holds the procedures that are scheduled to be run during that time segment.
 
@@ -16210,7 +16210,7 @@ in section @ref{3-3-2}.
 
 The agenda itself is a one-dimensional table of time segments.  It differs from
 the tables described in section @ref{3-3-3} in that the segments will be sorted
-in order of increasing time.  In addition, we store the @newterm{current time}
+in order of increasing time.  In addition, we store the @dfn{current time}
 (i.e., the time of the last action that was processed) at the head of the
 agenda.  A newly constructed agenda has no time segments and has a current time
 of 0:@footnote{The agenda is a headed list, like the tables in section
@@ -16356,7 +16356,7 @@ constraints.}
 
 In this section, we sketch the design of a language that enables us to work in
 terms of relations themselves.  The primitive elements of the language are
-@newterm{primitive constraints}, which state that certain relations hold
+@dfn{primitive constraints}, which state that certain relations hold
 between quantities.  For example, @code{(adder a b c)} specifies that the
 quantities @i{a}, @i{b}, and @i{c} must be related by the equation @i{a} +
 @i{b} = @i{c}, @code{(multiplier x y z)} expresses the constraint @i{x}@i{y} =
@@ -16364,8 +16364,8 @@ quantities @i{a}, @i{b}, and @i{c} must be related by the equation @i{a} +
 
 Our language provides a means of combining primitive constraints in order to
 express more complex relations.  We combine constraints by constructing
-@newterm{constraint networks}, in which constraints are joined by
-@newterm{connectors}.  A connector is an object that ``holds'' a value that may
+@dfn{constraint networks}, in which constraints are joined by
+@dfn{connectors}.  A connector is an object that ``holds'' a value that may
 participate in one or more constraints.  For example, we know that the
 relationship between Fahrenheit and Celsius temperatures is
 
@@ -16944,7 +16944,7 @@ sameness and change, and the need to abandon the substitution model of
 evaluation in favor of the more intricate environment model.
 
 The central issue lurking beneath the complexity of state, sameness, and change
-is that by introducing assignment we are forced to admit @newterm{time} into
+is that by introducing assignment we are forced to admit @dfn{time} into
 our computational models.  Before we introduced assignment, all our programs
 were timeless, in the sense that any expression that has a value always has the
 same value.  In contrast, recall the example of modeling withdrawals from a
@@ -16962,7 +16962,7 @@ of section @ref{3-1-1}:
 Here successive evaluations of the same expression yield different values.
 This behavior arises from the fact that the execution of assignment statements
 (in this case, assignments to the variable @code{balance}) delineates
-@newterm{moments in time} when values change.  The result of evaluating an
+@dfn{moments in time} when values change.  The result of evaluating an
 expression depends not only on the expression itself, but also on whether the
 evaluation occurs before or after these moments.  Building models in terms of
 computational objects with local state forces us to confront time as an
@@ -16970,7 +16970,7 @@ essential concept in programming.
 
 We can go further in structuring computational models to match our perception
 of the physical world.  Objects in the world do not change one at a time in
-sequence.  Rather we perceive them as acting @newterm{concurrently}---all at
+sequence.  Rather we perceive them as acting @dfn{concurrently}---all at
 once.  So it is often natural to model systems as collections of computational
 processes that execute concurrently.  Just as we can make our programs modular
 by organizing models in terms of objects with separate local state, it is often
@@ -16985,7 +16985,7 @@ a speed advantage over sequential computation.  Sequential computers execute
 only one operation at a time, so the amount of time it takes to perform a task
 is proportional to the total number of operations performed.@footnote{Most real
 processors actually execute a few operations at a time, following a strategy
-called @newterm{pipelining}.  Although this technique greatly improves the
+called @dfn{pipelining}.  Although this technique greatly improves the
 effective utilization of the hardware, it is used only to speed up the
 execution of a sequential instruction stream, while retaining the behavior of
 the sequential program.}  However, if it is possible to decompose a problem
@@ -17076,7 +17076,7 @@ combination of the information being written by the two processes.  Most
 computers have interlocks on the primitive memory-write operations, which
 protect against such simultaneous access.  Even this seemingly simple kind of
 protection, however, raises implementation challenges in the design of
-multiprocessing computers, where elaborate @newterm{cache-coherence} protocols
+multiprocessing computers, where elaborate @dfn{cache-coherence} protocols
 are required to ensure that the various processors will maintain a consistent
 view of memory contents, despite the fact that data may be replicated
 (``cached'') among the different processors to increase the speed of memory
@@ -17203,7 +17203,7 @@ Paul concurrently withdraws half the money in the account.  Then sequential
 execution could result in the account balance being either $70 or $90 (see
 @ref{Exercise 3-38}).@footnote{[Footnote 39]@anchor{Footnote 39} A more formal
 way to express this idea is to say that concurrent programs are inherently
-@newterm{nondeterministic}. That is, they are described not by single-valued
+@dfn{nondeterministic}. That is, they are described not by single-valued
 functions, but by functions whose results are sets of possible values.  In
 section @ref{4-3} we will study a language for expressing nondeterministic
 computations.}
@@ -17273,7 +17273,7 @@ A more practical approach to the design of concurrent systems is to devise
 general mechanisms that allow us to constrain the interleaving of concurrent
 processes so that we can be sure that the program behavior is correct.  Many
 mechanisms have been developed for this purpose.  In this section, we describe
-one of them, the @newterm{serializer}.
+one of them, the @dfn{serializer}.
 
 @subsubheading Serializing access to shared state
 
@@ -17342,7 +17342,7 @@ depending on the interleaving of the events of @i{P}_1 and @i{P}_2:
 @end example
 
 We can constrain the concurrency by using serialized procedures, which are
-created by @newterm{serializers}. Serializers are constructed by
+created by @dfn{serializers}. Serializers are constructed by
 @code{make-serializer}, whose implementation is given below.  A serializer
 takes a procedure as argument and returns a serialized procedure that behaves
 like the original procedure.  All calls to a given serializer return serialized
@@ -17677,14 +17677,14 @@ happens when @code{serialized-exchange} is called.
 @subsubheading Implementing serializers
 
 We implement serializers in terms of a more primitive synchronization mechanism
-called a @newterm{mutex}.  A mutex is an object that supports two
-operations---the mutex can be @newterm{acquired}, and the mutex can be
-@newterm{released}.  Once a mutex has been acquired, no other acquire
+called a @dfn{mutex}.  A mutex is an object that supports two
+operations---the mutex can be @dfn{acquired}, and the mutex can be
+@dfn{released}.  Once a mutex has been acquired, no other acquire
 operations on that mutex may proceed until the mutex is released.@footnote{The
-term ``mutex'' is an abbreviation for @newterm{mutual exclusion}.  The general
+term ``mutex'' is an abbreviation for @dfn{mutual exclusion}.  The general
 problem of arranging a mechanism that permits concurrent processes to safely
 share resources is called the mutual exclusion problem.  Our mutex is a simple
-variant of the @newterm{semaphore} mechanism (see @ref{Exercise 3-47}), which
+variant of the @dfn{semaphore} mechanism (see @ref{Exercise 3-47}), which
 was introduced in the ``THE'' Multiprogramming System developed at the
 Technological University of Eindhoven and named for the university's initials
 in Dutch (Dijkstra 1968a).  The acquire and release operations were originally
@@ -17712,7 +17712,7 @@ property that we need to guarantee.
 @end lisp
 
 The mutex is a mutable object (here we'll use a one-element list, which we'll
-refer to as a @newterm{cell}) that can hold the value true or false.  When the
+refer to as a @dfn{cell}) that can hold the value true or false.  When the
 value is false, the mutex is available to be acquired.  When the value is true,
 the mutex is unavailable, and any process that attempts to acquire the mutex
 must wait.
@@ -17757,7 +17757,7 @@ procedure:
 However, this implementation of @code{test-and-set!} does not suffice as it
 stands.  There is a crucial subtlety here, which is the essential place where
 concurrency control enters the system: The @code{test-and-set!} operation must
-be performed @newterm{atomically}.  That is, we must guarantee that, once a
+be performed @dfn{atomically}.  That is, we must guarantee that, once a
 process has tested the cell and found it to be false, the cell contents will
 actually be set to true before any other process can test the cell.  If we do
 not make this guarantee, then the mutex can fail in a way similar to the
@@ -17792,7 +17792,7 @@ processor-memory interface.  One issue that arises here is to determine what
 happens if two processes attempt to acquire the same resource at exactly the
 same time by using such an instruction.  This requires some mechanism for
 making a decision about which process gets control.  Such a mechanism is called
-an @newterm{arbiter}.  Arbiters usually boil down to some sort of hardware
+an @dfn{arbiter}.  Arbiters usually boil down to some sort of hardware
 device.  Unfortunately, it is possible to prove that one cannot physically
 construct a fair arbiter that works 100% of the time unless one allows the
 arbiter an arbitrarily long time to make its decision.  The fundamental
@@ -17840,7 +17840,7 @@ procedure protecting @i{a}2.  Now Peter cannot proceed (to enter a serialized
 procedure protecting @i{a}2) until Paul exits the serialized procedure
 protecting @i{a}2.  Similarly, Paul cannot proceed until Peter exits the
 serialized procedure protecting @i{a}1.  Each process is stalled forever,
-waiting for the other.  This situation is called a @newterm{deadlock}.
+waiting for the other.  This situation is called a @dfn{deadlock}.
 Deadlock is always a danger in systems that provide concurrent access to
 multiple shared resources.
 
@@ -17853,7 +17853,7 @@ techniques, or where deadlock cannot be avoided at all.  (See @ref{Exercise
 3-48} and @ref{Exercise 3-49}.)@footnote{The general technique for avoiding
 deadlock by numbering the shared resources and acquiring them in order is due
 to Havender (1968).  Situations where deadlock cannot be avoided require
-@newterm{deadlock-recovery} methods, which entail having processes ``back out''
+@dfn{deadlock-recovery} methods, which entail having processes ``back out''
 of the deadlocked state and try again.  Deadlock-recovery mechanisms are widely
 used in database management systems, a topic that is treated in detail in Gray
 and Reuter 1993.}
@@ -17892,7 +17892,7 @@ such as pipelining and cached memory, the contents of memory may not be in a
 consistent state at every instant.  In contemporary multiprocessing systems,
 therefore, the serializer paradigm is being supplanted by new approaches to
 concurrency control.@footnote{One such alternative to serialization is called
-@newterm{barrier synchronization}.  The programmer permits concurrent processes
+@dfn{barrier synchronization}.  The programmer permits concurrent processes
 to execute as they please, but establishes certain synchronization points
 (``barriers'') through which no process can proceed until all the processes
 have reached the barrier.  Modern processors provide machine instructions that
@@ -17941,7 +17941,7 @@ We've gained a good understanding of assignment as a tool in modeling, as well
 as an appreciation of the complex problems that assignment raises. It is time
 to ask whether we could have gone about things in a different way, so as to
 avoid some of these problems.  In this section, we explore an alternative
-approach to modeling state, based on data structures called @newterm{streams}.
+approach to modeling state, based on data structures called @dfn{streams}.
 As we shall see, streams can mitigate some of the complexity of modeling state.
 
 Let's step back and review where this complexity comes from.  In an attempt to
@@ -17969,11 +17969,11 @@ If time is measured in discrete steps, then we can model a time function as a
 (possibly infinite) sequence.  In this section, we will see how to model change
 in terms of sequences that represent the time histories of the systems being
 modeled.  To accomplish this, we introduce new data structures called
-@newterm{streams}.  From an abstract point of view, a stream is simply a
+@dfn{streams}.  From an abstract point of view, a stream is simply a
 sequence.  However, we will find that the straightforward implementation of
 streams as lists (as in section @ref{2-2-1}) doesn't fully reveal the power of
 stream processing.  As an alternative, we introduce the technique of
-@newterm{delayed evaluation}, which enables us to represent very large (even
+@dfn{delayed evaluation}, which enables us to represent very large (even
 infinite) sequences as streams.
 
 Stream processing lets us model systems that have state without ever using
@@ -18143,7 +18143,7 @@ time.
 
 Our implementation of streams will be based on a special form called
 @code{delay}.  Evaluating @code{(delay <@var{exp}>)} does not evaluate the
-expression <@var{exp}>, but rather returns a so-called @newterm{delayed
+expression <@var{exp}>, but rather returns a so-called @dfn{delayed
 object}, which we can think of as a ``promise'' to evaluate <@var{exp}> at some
 future time.  As a companion to @code{delay}, there is a procedure called
 @code{force} that takes a delayed object as argument and performs the
@@ -18368,14 +18368,14 @@ to
 and @code{force} is as defined previously.@footnote{There are many possible
 implementations of streams other than the one described in this section.
 Delayed evaluation, which is the key to making streams practical, was inherent
-in Algol 60's @newterm{call-by-name} parameter-passing method.  The use of this
+in Algol 60's @dfn{call-by-name} parameter-passing method.  The use of this
 mechanism to implement streams was first described by Landin (1965).  Delayed
 evaluation for streams was introduced into Lisp by Friedman and Wise (1976). In
 their implementation, @code{cons} always delays evaluating its arguments, so
 that lists automatically behave as streams.  The memoizing optimization is also
-known as @newterm{call-by-need}.  The Algol community would refer to our
-original delayed objects as @newterm{call-by-name thunks} and to the optimized
-versions as @newterm{call-by-need thunks}.}
+known as @dfn{call-by-need}.  The Algol community would refer to our
+original delayed objects as @dfn{call-by-name thunks} and to the optimized
+versions as @dfn{call-by-need thunks}.}
 
 @quotation
 @strong{@anchor{Exercise 3-50}Exercise 3.50:} Complete the following
@@ -18515,7 +18515,7 @@ promise to evaluate @code{(fibgen 1 2)}, and so on.
 
 For a look at a more exciting infinite stream, we can generalize the
 @code{no-sevens} example to construct the infinite stream of prime numbers,
-using a method known as the @newterm{sieve of
+using a method known as the @dfn{sieve of
 Eratosthenes}.@footnote{Eratosthenes, a third-century @acronym{B.C.}
 Alexandrian Greek philosopher, is famous for giving the first accurate estimate
 of the circumference of the Earth, which he computed by observing shadows cast
@@ -18708,7 +18708,7 @@ ancient proof by Euclid that there are an infinite number of primes shows that
 @i{p}_(@i{n}+1)<= @i{p}_1 @i{p}_2@dots{}@i{p}_@i{n} + 1, and no substantially
 better result was proved until 1851, when the Russian mathematician
 P. L. Chebyshev established that @i{p}_(@i{n}+1)<= 2@i{p}_@i{n} for all @i{n}.
-This result, originally conjectured in 1845, is known as @newterm{Bertrand's
+This result, originally conjectured in 1845, is known as @dfn{Bertrand's
 hypothesis}.  A proof can be found in section 22.3 of Hardy and Wright 1960.}
 
 @quotation
@@ -18831,7 +18831,7 @@ integers.)  What are the successive elements produced by @code{(expand 1 7
 @quotation
 @strong{@anchor{Exercise 3-59}Exercise 3.59:} In section @ref{2-5-3} we saw how
 to implement a polynomial arithmetic system representing polynomials as lists
-of terms.  In a similar way, we can work with @newterm{power series}, such as
+of terms.  In a similar way, we can work with @dfn{power series}, such as
 
 @example
                x^2     x^3       x^4
@@ -19044,7 +19044,7 @@ sequence bound the value of @i{[pi]} between 3.284 and 3.017.
 So far, our use of the stream of states approach is not much different from
 updating state variables.  But streams give us an opportunity to do some
 interesting tricks.  For example, we can transform a stream with a
-@newterm{sequence accelerator} that converts a sequence of approximations to a
+@dfn{sequence accelerator} that converts a sequence of approximations to a
 new sequence that converges to the same value as the original, only faster.
 
 One such accelerator, due to the eighteenth-century Swiss mathematician
@@ -19090,7 +19090,7 @@ We can demonstrate Euler acceleration with our sequence of approximations to
 
 Even better, we can accelerate the accelerated sequence, and recursively
 accelerate that, and so on.  Namely, we create a stream of streams (a structure
-we'll call a @newterm{tableau}) in which each stream is the transform of the
+we'll call a @dfn{tableau}) in which each stream is the transform of the
 preceding one:
 
 @lisp
@@ -19416,7 +19416,7 @@ ordered according to the sum 2 @i{i} + 3 @i{j} + 5 @i{i} @i{j}.
 @quotation
 @strong{@anchor{Exercise 3-71}Exercise 3.71:} Numbers that can be expressed as
 the sum of two cubes in more than one way are sometimes called
-@newterm{Ramanujan numbers}, in honor of the mathematician Srinivasa
+@dfn{Ramanujan numbers}, in honor of the mathematician Srinivasa
 Ramanujan.@footnote{To quote from G. H. Hardy's obituary of Ramanujan (Hardy
 1921): ``It was Mr. Littlewood (I believe) who remarked that `every positive
 integer was one of his friends.'  I remember once going to see him when he was
@@ -19446,8 +19446,8 @@ We began our discussion of streams by describing them as computational analogs
 of the ``signals'' in signal-processing systems.  In fact, we can use streams
 to model signal-processing systems in a very direct way, representing the
 values of a signal at successive time intervals as consecutive elements of a
-stream.  For instance, we can implement an @newterm{integrator} or
-@newterm{summer} that, for an input stream @i{x} = (@i{x}_@i{i}), an initial
+stream.  For instance, we can implement an @dfn{integrator} or
+@dfn{summer} that, for an input stream @i{x} = (@i{x}_@i{i}), an initial
 value @i{C}, and a small increment @i{d}@i{t}, accumulates the sum
 
 @example
@@ -19500,7 +19500,7 @@ input  |           |      |\__    +-->|   \_  integral
 @quotation
 @strong{@anchor{Exercise 3-73}Exercise 3.73:} We can model electrical circuits
 using streams to represent the values of currents or voltages at a sequence of
-times.  For instance, suppose we have an @newterm{RC circuit} consisting of a
+times.  For instance, suppose we have an @dfn{RC circuit} consisting of a
 resistor of resistance @i{R} and a capacitor of capacitance @i{C} in series.
 The voltage response @i{v} of the circuit to an injected current @i{i} is
 determined by the formula in @ref{Figure 3-33}, whose structure is shown by the
@@ -19546,7 +19546,7 @@ signal-flow diagram.
 @quotation
 @strong{@anchor{Exercise 3-74}Exercise 3.74:} Alyssa P. Hacker is designing a
 system to process signals coming from physical sensors.  One important feature
-she wishes to produce is a signal that describes the @newterm{zero crossings}
+she wishes to produce is a signal that describes the @dfn{zero crossings}
 of the input signal.  That is, the resulting signal should be + 1 whenever the
 input signal changes from negative to positive, - 1 whenever the input signal
 changes from positive to negative, and 0 otherwise.  (Assume that the sign of a
@@ -19701,7 +19701,7 @@ can begin working to generate the first element of @code{dy}, which will
 produce the next element of @code{y}, and so on.
 
 To take advantage of this idea, we will redefine @code{integral} to expect the
-integrand stream to be a @newterm{delayed argument}.  @code{Integral} will
+integrand stream to be a @dfn{delayed argument}.  @code{Integral} will
 @code{force} the integrand to be evaluated only when it is required to generate
 more than the first element of the output stream:
 
@@ -19815,7 +19815,7 @@ second-order differential equations @i{d}^2 @i{y}/@i{d}@i{t}^2 =
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 3-80}Exercise 3.80:} A @newterm{series RLC circuit}
+@strong{@anchor{Exercise 3-80}Exercise 3.80:} A @dfn{series RLC circuit}
 consists of a resistor, a capacitor, and an inductor connected in series, as
 shown in @ref{Figure 3-36}.  If @i{R}, @i{L}, and @i{C} are the resistance,
 inductance, and capacitance, then the relations between voltage (@i{v}) and
@@ -19945,7 +19945,7 @@ with this problem is illustrated by the language ML (Gordon, Milner, and
 Wadsworth 1979), whose ``polymorphic data types'' include templates for
 higher-order transformations between data types.  Moreover, data types for most
 procedures in ML are never explicitly declared by the programmer.  Instead, ML
-includes a @newterm{type-inferencing} mechanism that uses information in the
+includes a @dfn{type-inferencing} mechanism that uses information in the
 environment to deduce the data types for newly defined procedures.}
 
 One way to avoid the need for two different classes of procedures is to make
@@ -20146,7 +20146,7 @@ the perception of interacting with a world of which we are part.  However, as
 we've seen repeatedly throughout this chapter, these models raise thorny
 problems of constraining the order of events and of synchronizing multiple
 processes.  The possibility of avoiding these problems has stimulated the
-development of @newterm{functional programming languages}, which do not include
+development of @dfn{functional programming languages}, which do not include
 any provision for assignment or mutable data.  In such a language, all
 procedures implement well-defined mathematical functions of their arguments,
 whose behavior does not change.  The functional approach is extremely
@@ -20186,7 +20186,7 @@ Paul's requests    |  merge  |---->| bank    |---->
 @end example
 @end quotation
 
-The trouble with this formulation is in the notion of @newterm{merge}.  It will
+The trouble with this formulation is in the notion of @dfn{merge}.  It will
 not do to merge the two streams by simply taking alternately one request from
 Peter and one request from Paul. Suppose Paul accesses the account only very
 rarely.  We could hardly force Peter to wait for Paul to access the account
@@ -20260,7 +20260,7 @@ of combination, and means of abstraction that are particularly well suited to
 the problem at hand.@footnote{The same idea is pervasive throughout all of
 engineering.  For example, electrical engineers use many different languages
 for describing circuits.  Two of these are the language of electrical
-@newterm{networks} and the language of electrical @newterm{systems}.  The
+@dfn{networks} and the language of electrical @dfn{systems}.  The
 network language emphasizes the physical modeling of devices in terms of
 discrete electrical elements.  The primitive objects of the network language
 are primitive electrical components such as resistors, capacitors, inductors,
@@ -20290,11 +20290,11 @@ representation of programs as sequences of primitive instructions.  These
 languages have means of combination and abstraction, such as procedure
 definition, that are appropriate to the larger-scale organization of systems.
 
-@newterm{Metalinguistic abstraction}---establishing new languages---plays an
+@dfn{Metalinguistic abstraction}---establishing new languages---plays an
 important role in all branches of engineering design.  It is particularly
 important to computer programming, because in programming not only can we
 formulate new languages but we can also implement these languages by
-constructing evaluators.  An @newterm{evaluator} (or @newterm{interpreter}) for
+constructing evaluators.  An @dfn{evaluator} (or @dfn{interpreter}) for
 a programming language is a procedure that, when applied to an expression of
 the language, performs the actions required to evaluate that expression.
 
@@ -20356,11 +20356,11 @@ from time in the computer.  Our stream programs, however, were sometimes
 cumbersome, because they were constrained by the applicative-order evaluation
 of Scheme.  In section @ref{4-2}, we'll change the underlying language to
 provide for a more elegant approach, by modifying the evaluator to provide for
-@newterm{normal-order evaluation}.
+@dfn{normal-order evaluation}.
 
 Section @ref{4-3} implements a more ambitious linguistic change, whereby
 expressions have many values, rather than just a single value.  In this
-language of @newterm{nondeterministic computing}, it is natural to express
+language of @dfn{nondeterministic computing}, it is natural to express
 processes that generate all possible values for expressions and then search for
 those values that satisfy certain constraints.  In terms of models of
 computation and time, this is like having time branch into a set of ``possible
@@ -20368,7 +20368,7 @@ futures'' and then searching for appropriate time lines.  With our
 nondeterministic evaluator, keeping track of multiple values and performing
 searches are handled automatically by the underlying mechanism of the language.
 
-In section @ref{4-4} we implement a @newterm{logic-programming} language in
+In section @ref{4-4} we implement a @dfn{logic-programming} language in
 which knowledge is expressed in terms of relations, rather than in terms of
 computations with inputs and outputs.  Even though this makes the language
 drastically different from Lisp, or indeed from any conventional language, we
@@ -20396,7 +20396,7 @@ procedures call other procedures and return values to their callers.  We will
 address these issues in @ref{Chapter 5}, where we take a closer look at the
 evaluation process by implementing the evaluator as a simple register machine.}
 An evaluator that is written in the same language that it evaluates is said to
-be @newterm{metacircular}.
+be @dfn{metacircular}.
 
 The metacircular evaluator is essentially a Scheme formulation of the
 environment model of evaluation described in section @ref{3-2}.  Recall that
@@ -20464,7 +20464,7 @@ critical procedures in the evaluator, @code{eval} and @code{apply}, which are
 described in section @ref{4-1-1} (see @ref{Figure 4-1}).
 
 The implementation of the evaluator will depend upon procedures that define the
-@newterm{syntax} of the expressions to be evaluated.  We will use data
+@dfn{syntax} of the expressions to be evaluated.  We will use data
 abstraction to make the evaluator independent of the representation of the
 language.  For example, rather than committing to a choice that an assignment
 is to be represented by a list beginning with the symbol @code{set!} we use an
@@ -20532,7 +20532,7 @@ keep the procedure general, we express the determination of the type of an
 expression abstractly, making no commitment to any particular representation
 for the various types of expressions.  Each type of expression has a predicate
 that tests for it and an abstract means for selecting its parts.  This
-@newterm{abstract syntax} makes it easy to see how we can change the syntax of
+@dfn{abstract syntax} makes it easy to see how we can change the syntax of
 the language by using the same evaluator, but with a different collection of
 syntax procedures.
 
@@ -21060,12 +21060,12 @@ it false.}
 @end lisp
 
 Expressions (such as @code{cond}) that we choose to implement as syntactic
-transformations are called @newterm{derived expressions}.  @code{Let}
+transformations are called @dfn{derived expressions}.  @code{Let}
 expressions are also derived expressions (see @ref{Exercise
 4-6}).@footnote{Practical Lisp systems provide a mechanism that allows a user
 to add new derived expressions and specify their implementation as syntactic
 transformations without modifying the evaluator.  Such a user-defined
-transformation is called a @newterm{macro}.  Although it is easy to add an
+transformation is called a @dfn{macro}.  Although it is easy to add an
 elementary mechanism for defining macros, the resulting language has subtle
 name-conflict problems.  There has been much research on mechanisms for macro
 definition that do not cause these difficulties.  See, for example, Kohlbecker
@@ -21473,8 +21473,8 @@ conceptually simple, is not efficient and would not ordinarily be used in a
 production system.@footnote{The drawback of this representation (as well as the
 variant in @ref{Exercise 4-11}) is that the evaluator may have to search
 through many frames in order to find the binding for a given variable.  (Such
-an approach is referred to as @newterm{deep binding}.)  One way to avoid this
-inefficiency is to make use of a strategy called @newterm{lexical addressing},
+an approach is referred to as @dfn{deep binding}.)  One way to avoid this
+inefficiency is to make use of a strategy called @dfn{lexical addressing},
 which will be discussed in section @ref{5-5-6}.}
 
 @quotation
@@ -21608,10 +21608,10 @@ original version of @code{apply} under a different name.}
 @end lisp
 
 For convenience in running the metacircular evaluator, we provide a
-@newterm{driver loop} that models the read-eval-print loop of the underlying
-Lisp system.  It prints a @newterm{prompt}, reads an input expression,
+@dfn{driver loop} that models the read-eval-print loop of the underlying
+Lisp system.  It prints a @dfn{prompt}, reads an input expression,
 evaluates this expression in the global environment, and prints the result.  We
-precede each printed result by an @newterm{output prompt} so as to distinguish
+precede each printed result by an @dfn{output prompt} so as to distinguish
 the value of the expression from other output that may be printed.@footnote{The
 primitive procedure @code{read} waits for input from the user, and returns the
 next complete expression that is typed.  For example, if the user types
@@ -21765,7 +21765,7 @@ machine.
 @end example
 @end quotation
 
-From this perspective, our evaluator is seen to be a @newterm{universal
+From this perspective, our evaluator is seen to be a @dfn{universal
 machine}.  It mimics other machines when these are described as Lisp
 programs.@footnote{The fact that the machines are described in Lisp is
 inessential.  If we give our evaluator a Lisp program that behaves as an
@@ -21776,12 +21776,12 @@ any Lisp program.  The deep idea here is that any evaluator can emulate any
 other.  Thus, the notion of ``what can in principle be computed'' (ignoring
 practicalities of time and memory required) is independent of the language or
 the computer, and instead reflects an underlying notion of
-@newterm{computability}.  This was first demonstrated in a clear way by Alan
+@dfn{computability}.  This was first demonstrated in a clear way by Alan
 M. Turing (1912-1954), whose 1936 paper laid the foundations for theoretical
 computer science.  In the paper, Turing presented a simple computational
-model---now known as a @newterm{Turing machine}---and argued that any
+model---now known as a @dfn{Turing machine}---and argued that any
 ``effective process'' can be formulated as a program for such a machine.  (This
-argument is known as the @newterm{Church-Turing thesis}.)  Turing then
+argument is known as the @dfn{Church-Turing thesis}.)  Turing then
 implemented a universal machine, i.e., a Turing machine that behaves as an
 evaluator for Turing-machine programs.  He used this framework to demonstrate
 that there are well-posed problems that cannot be computed by Turing machines
@@ -21798,7 +21798,7 @@ complex.  It is remarkable that the program evaluator is a rather simple
 program.@footnote{Some people find it counterintuitive that an evaluator, which
 is implemented by a relatively simple procedure, can emulate programs that are
 more complex than the evaluator itself.  The existence of a universal evaluator
-machine is a deep and wonderful property of computation.  @newterm{Recursion
+machine is a deep and wonderful property of computation.  @dfn{Recursion
 theory}, a branch of mathematical logic, is concerned with logical limits of
 computation.  Douglas Hofstadter's beautiful book @cite{G@"odel, Escher, Bach}
 (1979) explores some of these ideas.}
@@ -21871,8 +21871,8 @@ possible outcome (either halting or running forever) violates the intended
 behavior of @code{halts?}.@footnote{Although we stipulated that @code{halts?}
 is given a procedure object, notice that this reasoning still applies even if
 @code{halts?} can gain access to the procedure's text and its environment.
-This is Turing's celebrated @newterm{Halting Theorem}, which gave the first
-clear example of a @newterm{non-computable} problem, i.e., a well-posed task
+This is Turing's celebrated @dfn{Halting Theorem}, which gave the first
+clear example of a @dfn{non-computable} problem, i.e., a well-posed task
 that cannot be carried out as a computational procedure.}
 @end quotation
 
@@ -22160,7 +22160,7 @@ method for accomplishing this is much more subtle than Louis imagined.  The
 following expression computes 10 factorial by applying a recursive factorial
 procedure:@footnote{This example illustrates a programming trick for
 formulating recursive procedures without using @code{define}.  The most general
-trick of this sort is the @i{Y} @newterm{operator}, which can be used to give a
+trick of this sort is the @i{Y} @dfn{operator}, which can be used to give a
 ``pure @i{[lambda]}-calculus'' implementation of recursion.  (See Stoy 1977 for
 details on the @i{[lambda]} calculus, and Gabriel 1988 for an exposition of the
 @i{Y} operator in Scheme.)}
@@ -22248,7 +22248,7 @@ also Feeley and Lapalme 1987) independently invented this technique in his
 master's thesis.} We split @code{eval}, which takes an expression and an
 environment, into two parts.  The procedure @code{analyze} takes only the
 expression.  It performs the syntactic analysis and returns a new procedure,
-the @newterm{execution procedure}, that encapsulates the work to be done in
+the @dfn{execution procedure}, that encapsulates the work to be done in
 executing the analyzed expression.  The execution procedure takes an
 environment as its argument and completes the evaluation.  This saves work
 because @code{analyze} will be called only once on an expression, while the
@@ -22503,12 +22503,12 @@ expressive power.
 @subsection Normal Order and Applicative Order
 
 In section @ref{1-1}, where we began our discussion of models of evaluation, we
-noted that Scheme is an @newterm{applicative-order} language, namely, that all
+noted that Scheme is an @dfn{applicative-order} language, namely, that all
 the arguments to Scheme procedures are evaluated when the procedure is applied.
-In contrast, @newterm{normal-order} languages delay evaluation of procedure
+In contrast, @dfn{normal-order} languages delay evaluation of procedure
 arguments until the actual argument values are needed.  Delaying evaluation of
 procedure arguments until the last possible moment (e.g., until they are
-required by a primitive operation) is called @newterm{lazy
+required by a primitive operation) is called @dfn{lazy
 evaluation}.@footnote{The difference between the ``lazy'' terminology and the
 ``normal-order'' terminology is somewhat fuzzy.  Generally, ``lazy'' refers to
 the mechanisms of particular evaluators, while ``normal-order'' refers to the
@@ -22550,9 +22550,9 @@ procedures, such as @code{unless}, can do useful computation even if evaluation
 of some of their arguments would produce errors or would not terminate.
 
 If the body of a procedure is entered before an argument has been evaluated we
-say that the procedure is @newterm{non-strict} in that argument.  If the
+say that the procedure is @dfn{non-strict} in that argument.  If the
 argument is evaluated before the body of the procedure is entered we say that
-the procedure is @newterm{strict} in that argument.@footnote{The ``strict''
+the procedure is @dfn{strict} in that argument.@footnote{The ``strict''
 versus ``non-strict'' terminology means essentially the same thing as
 ``applicative-order'' versus ``normal-order,'' except that it refers to
 individual procedures and arguments rather than to the language as a whole.  At
@@ -22615,7 +22615,7 @@ this way.  Almost all the required changes center around procedure application.
 The basic idea is that, when applying a procedure, the interpreter must
 determine which arguments are to be evaluated and which are to be delayed.  The
 delayed arguments are not evaluated; instead, they are transformed into objects
-called @newterm{thunks}.@footnote{The word @newterm{thunk} was invented by an
+called @dfn{thunks}.@footnote{The word @dfn{thunk} was invented by an
 informal working group that was discussing the implementation of call-by-name
 in Algol 60.  They observed that most of the analysis of (``thinking about'')
 the expression could be done at compile time; thus, at run time, the expression
@@ -22626,7 +22626,7 @@ the thunk must contain the argument expression and the environment in which the
 procedure application is being evaluated.
 
 The process of evaluating the expression in a thunk is called
-@newterm{forcing}.@footnote{This is analogous to the use of @code{force} on the
+@dfn{forcing}.@footnote{This is analogous to the use of @code{force} on the
 delayed objects that were introduced in @ref{Chapter 3} to represent streams.
 The critical difference between what we are doing here and what we did in
 @ref{Chapter 3} is that we are building delaying and forcing into the
@@ -22635,14 +22635,14 @@ In general, a thunk will be forced only when its value is needed: when it is
 passed to a primitive procedure that will use the value of the thunk; when it
 is the value of a predicate of a conditional; and when it is the value of an
 operator that is about to be applied as a procedure.  One design choice we have
-available is whether or not to @newterm{memoize} thunks, as we did with delayed
+available is whether or not to @dfn{memoize} thunks, as we did with delayed
 objects in section @ref{3-5-1}.  With memoization, the first time a thunk is
 forced, it stores the value that is computed.  Subsequent forcings simply
 return the stored value without repeating the computation.  We'll make our
 interpreter memoize, because this is more efficient for many applications.
 There are tricky considerations here, however.@footnote{Lazy evaluation
-combined with memoization is sometimes referred to as @newterm{call-by-need}
-argument passing, in contrast to @newterm{call-by-name} argument passing.
+combined with memoization is sometimes referred to as @dfn{call-by-need}
+argument passing, in contrast to @dfn{call-by-name} argument passing.
 (Call-by-name, introduced in Algol 60, is similar to non-memoized lazy
 evaluation.)  As language designers, we can build our evaluator to memoize, not
 to memoize, or leave this an option for programmers (@ref{Exercise 4-31}).  As
@@ -22824,7 +22824,7 @@ evaluated.@footnote{Notice that we also erase the @code{env} from the thunk
 once the expression's value has been computed.  This makes no difference in the
 values returned by the interpreter.  It does help save space, however, because
 removing the reference from the thunk to the @code{env} once it is no longer
-needed allows this structure to be @newterm{garbage-collected} and its space
+needed allows this structure to be @dfn{garbage-collected} and its space
 recycled, as we will discuss in section @ref{5-3}.
 
 Similarly, we could have allowed unneeded environments in the memoized delayed
@@ -23010,7 +23010,7 @@ like Cy's approach, the approach in the text, or some other approach?
 @strong{@anchor{Exercise 4-31}Exercise 4.31:} The approach taken in this
 section is somewhat unpleasant, because it makes an incompatible change to
 Scheme.  It might be nicer to implement lazy evaluation as an
-@newterm{upward-compatible extension}, that is, so that ordinary Scheme
+@dfn{upward-compatible extension}, that is, so that ordinary Scheme
 programs will work as before.  We can do this by extending the syntax of
 procedure declarations to let the user control whether or not arguments are to
 be delayed.  While we're at it, we may as well also give the user the choice
@@ -23185,7 +23185,7 @@ order to print them.
 @section Variations on a Scheme -- Nondeterministic Computing
 
 In this section, we extend the Scheme evaluator to support a programming
-paradigm called @newterm{nondeterministic computing} by building into the
+paradigm called @dfn{nondeterministic computing} by building into the
 evaluator a facility to support automatic search.  This is a much more profound
 change to the language than the introduction of lazy evaluation in section
 @ref{4-2}.
@@ -23356,7 +23356,7 @@ the computation branches so that each value is investigated separately.}
 Abstractly, we can imagine that evaluating an @code{amb} expression causes time
 to split into branches, where the computation continues on each branch with one
 of the possible values of the expression.  We say that @code{amb} represents a
-@newterm{nondeterministic choice point}.  If we had a machine with a sufficient
+@dfn{nondeterministic choice point}.  If we had a machine with a sufficient
 number of processors that could be dynamically allocated, we could implement
 the search in a straightforward way.  Execution would proceed as in a
 sequential machine, until an @code{amb} expression is encountered.  At this
@@ -23379,7 +23379,7 @@ could imagine modifying an evaluator to pick at random a branch to follow
 whenever it encounters a choice point.  Random choice, however, can easily lead
 to failing values.  We might try running the evaluator over and over, making
 random choices and hoping to find a non-failing value, but it is better to
-@newterm{systematically search} all possible execution paths.  The @code{amb}
+@dfn{systematically search} all possible execution paths.  The @code{amb}
 evaluator that we will develop and work with in this section implements a
 systematic search as follows: When the evaluator encounters an application of
 @code{amb}, it initially selects the first alternative.  This selection may
@@ -23388,11 +23388,11 @@ the first alternative at each choice point.  If a choice results in a failure,
 then the evaluator automagically@footnote{Automagically: ``Automatically, but
 in a way which, for some reason (typically because it is too complicated, or
 too ugly, or perhaps even too trivial), the speaker doesn't feel like
-explaining.''  (Steele 1983, Raymond 1993)} @newterm{backtracks} to the most
+explaining.''  (Steele 1983, Raymond 1993)} @dfn{backtracks} to the most
 recent choice point and tries the next alternative.  If it runs out of
 alternatives at any choice point, the evaluator will back up to the previous
 choice point and resume from there.  This process leads to a search strategy
-known as @newterm{depth-first search} or @newterm{chronological
+known as @dfn{depth-first search} or @dfn{chronological
 backtracking}.@footnote{[Footnote 4.47]@anchor{Footnote 4-47} The integration
 of automatic search strategies into programming languages has had a long and
 checkered history.  The first suggestions that nondeterministic algorithms
@@ -23412,11 +23412,11 @@ and Stallman (1975) found a more tractable approach while investigating methods
 of symbolic analysis for electrical circuits.  They developed a
 non-chronological backtracking scheme that was based on tracing out the logical
 dependencies connecting facts, a technique that has come to be known as
-@newterm{dependency-directed backtracking}.  Although their method was complex,
+@dfn{dependency-directed backtracking}.  Although their method was complex,
 it produced reasonably efficient programs because it did little redundant
 search.  Doyle (1979) and McAllester (1978, 1980) generalized and clarified the
 methods of Stallman and Sussman, developing a new paradigm for formulating
-search that is now called @newterm{truth maintenance}.  Modern problem-solving
+search that is now called @dfn{truth maintenance}.  Modern problem-solving
 systems all use some form of truth-maintenance system as a substrate.  See
 Forbus and deKleer 1993 for a discussion of elegant ways to build
 truth-maintenance systems and applications using truth maintenance.  Zabih,
@@ -23679,7 +23679,7 @@ each other.  Write a nondeterministic program to solve this puzzle.
 @subsubheading Parsing natural language
 
 Programs designed to accept natural language as input usually start by
-attempting to @newterm{parse} the input, that is, to match the input against
+attempting to @dfn{parse} the input, that is, to match the input against
 some grammatical structure.  For example, we might try to recognize simple
 sentences consisting of an article followed by a noun followed by a verb, such
 as ``The cat eats.''  To accomplish such an analysis, we must be able to
@@ -23696,7 +23696,7 @@ words in the list.}
 (define articles '(article the a))
 @end lisp
 
-We also need a @newterm{grammar}, that is, a set of rules describing how
+We also need a @dfn{grammar}, that is, a set of rules describing how
 grammatical elements are composed from simpler elements.  A very simple grammar
 might stipulate that a sentence always consists of two pieces---a noun phrase
 followed by a verb---and that a noun phrase consists of an article followed by
@@ -23989,11 +23989,11 @@ Scheme will be entirely in the execution procedures.
 Recall that the execution procedures for the ordinary evaluator take one
 argument: the environment of execution.  In contrast, the execution procedures
 in the @code{amb} evaluator take three arguments: the environment, and two
-procedures called @newterm{continuation procedures}.  The evaluation of an
+procedures called @dfn{continuation procedures}.  The evaluation of an
 expression will finish by calling one of these two continuations: If the
-evaluation results in a value, the @newterm{success continuation} is called
+evaluation results in a value, the @dfn{success continuation} is called
 with that value; if the evaluation results in the discovery of a dead end, the
-@newterm{failure continuation} is called.  Constructing and calling appropriate
+@dfn{failure continuation} is called.  Constructing and calling appropriate
 continuations is the mechanism by which the nondeterministic evaluator
 implements backtracking.
 
@@ -24604,12 +24604,12 @@ unidirectional functions.  In a nondeterministic language, expressions can have
 more than one value, and, as a result, the computation is dealing with
 relations rather than with single-valued functions.  Logic programming extends
 this idea by combining a relational vision of programming with a powerful kind
-of symbolic pattern matching called @newterm{unification}.@footnote{Logic
+of symbolic pattern matching called @dfn{unification}.@footnote{Logic
 programming has grown out of a long history of research in automatic theorem
 proving.  Early theorem-proving programs could accomplish very little, because
 they exhaustively searched the space of possible proofs.  The major
 breakthrough that made such a search plausible was the discovery in the early
-1960s of the @newterm{unification algorithm} and the @newterm{resolution
+1960s of the @dfn{unification algorithm} and the @dfn{resolution
 principle} (Robinson 1965).  Resolution was used, for example, by Green and
 Raphael (1968) (see also Green 1969) as the basis for a deductive
 question-answering system.  During most of this period, researchers
@@ -24718,9 +24718,9 @@ Earlier in this chapter we explored the technology of implementing interpreters
 and described the elements that are essential to an interpreter for a Lisp-like
 language (indeed, to an interpreter for any conventional language).  Now we
 will apply these ideas to discuss an interpreter for a logic programming
-language.  We call this language the @newterm{query language}, because it is
+language.  We call this language the @dfn{query language}, because it is
 very useful for retrieving information from data bases by formulating
-@newterm{queries}, or questions, expressed in the language.  Even though the
+@dfn{queries}, or questions, expressed in the language.  Even though the
 query language is very different from Lisp, we will find it convenient to
 describe the language in terms of the same general framework we have been using
 all along: as a collection of primitive elements, together with means of
@@ -24732,7 +24732,7 @@ Nevertheless, we will see that our query-language interpreter contains many of
 the same elements found in the interpreter of section @ref{4-1}.  In
 particular, there will be an ``eval'' part that classifies expressions
 according to type and an ``apply'' part that implements the language's
-abstraction mechanism (procedures in the case of Lisp, and @newterm{rules} in
+abstraction mechanism (procedures in the case of Lisp, and @dfn{rules} in
 the case of logic programming).  Also, a central role is played in the
 implementation by a frame data structure, which determines the correspondence
 between symbols and their associated values.  One additional interesting aspect
@@ -24761,7 +24761,7 @@ general rules in order to make logical deductions.
 
 @subsubheading A sample data base
 
-The personnel data base for Microshaft contains @newterm{assertions} about
+The personnel data base for Microshaft contains @dfn{assertions} about
 company personnel.  Here is the information about Ben Bitdiddle, the resident
 computer wizard:
 
@@ -24885,11 +24885,11 @@ The system will respond with the following items:
 @end lisp
 
 The input query specifies that we are looking for entries in the data base that
-match a certain @newterm{pattern}.  In this example, the pattern specifies
+match a certain @dfn{pattern}.  In this example, the pattern specifies
 entries consisting of three items, of which the first is the literal symbol
 @code{job}, the second can be anything, and the third is the literal list
 @code{(computer programmer)}.  The ``anything'' that can be the second item in
-the matching list is specified by a @newterm{pattern variable}, @code{?x}.  The
+the matching list is specified by a @dfn{pattern variable}, @code{?x}.  The
 general form of a pattern variable is a symbol, taken to be the name of the
 variable, preceded by a question mark.  We will see below why it is useful to
 specify names for pattern variables rather than just putting @code{?} into
@@ -24992,8 +24992,8 @@ We can describe the query language's processing of simple queries as follows:
 
 @item
 The system finds all assignments to variables in the query pattern that
-@newterm{satisfy} the pattern---that is, all sets of values for the variables
-such that if the pattern variables are @newterm{instantiated with} (replaced
+@dfn{satisfy} the pattern---that is, all sets of values for the variables
+such that if the pattern variables are @dfn{instantiated with} (replaced
 by) the values, the result is in the data base.
 
 @item
@@ -25172,7 +25172,7 @@ together with the supervisor's name and job.
 @subsubheading Rules
 
 In addition to primitive queries and compound queries, the query language
-provides means for abstracting queries.  These are given by @newterm{rules}.
+provides means for abstracting queries.  These are given by @dfn{rules}.
 The rule
 
 @lisp
@@ -25368,7 +25368,7 @@ each other, in which each pair appears only once?  Explain.
 We can regard a rule as a kind of logical implication: @emph{If} an assignment
 of values to pattern variables satisfies the body, @emph{then} it satisfies the
 conclusion.  Consequently, we can regard the query language as having the
-ability to perform @newterm{logical deductions} based upon the rules.  As an
+ability to perform @dfn{logical deductions} based upon the rules.  As an
 example, consider the @code{append} operation described at the beginning of
 section @ref{4-4}.  As we said, @code{append} can be characterized by the
 following two rules:
@@ -25523,7 +25523,7 @@ Another possibility is to manage the search with the aid of streams.  Our
 implementation follows this second approach.
 
 The query system is organized around two central operations called
-@newterm{pattern matching} and @newterm{unification}.  We first describe
+@dfn{pattern matching} and @dfn{unification}.  We first describe
 pattern matching and explain how this operation, together with the organization
 of information in terms of streams of frames, enables us to implement both
 simple and compound queries.  We next discuss unification, a generalization of
@@ -25534,7 +25534,7 @@ interpreter described in section @ref{4-1}.
 
 @subsubheading Pattern matching
 
-A @newterm{pattern matcher} is a program that tests whether some datum fits a
+A @dfn{pattern matcher} is a program that tests whether some datum fits a
 specified pattern.  For example, the data list @code{((a b) c (a b))} matches
 the pattern @code{(?x c ?x)} with the pattern variable @code{?x} bound to
 @code{(a b)}.  The same data list matches the pattern @code{(?x ?y ?z)} with
@@ -25545,7 +25545,7 @@ not match the pattern @code{(?x a ?y)}, since that pattern specifies a list
 whose second element is the symbol @code{a}.
 
 The pattern matcher used by the query system takes as inputs a pattern, a
-datum, and a @newterm{frame} that specifies bindings for various pattern
+datum, and a @dfn{frame} that specifies bindings for various pattern
 variables.  It checks whether the datum matches the pattern in a way that is
 consistent with the bindings already in the frame.  If so, it returns the given
 frame augmented by any bindings that may have been determined by the match.
@@ -25588,7 +25588,7 @@ final match.  The coarse match filters the data base to produce a small set of
 candidates for the final match.  With care, we can arrange our data base so
 that some of the work of coarse matching can be done when the data base is
 constructed rather then when we want to select the candidates.  This is called
-@newterm{indexing} the data base.  There is a vast technology built around
+@dfn{indexing} the data base.  There is a vast technology built around
 data-base-indexing schemes.  Our implementation, described in section
 @ref{4-4-4}, contains a simple-minded form of such an optimization.}
 
@@ -25763,7 +25763,7 @@ frames for which the predicate fails.
 In order to handle rules in the query language, we must be able to find the
 rules whose conclusions match a given query pattern.  Rule conclusions are like
 assertions except that they can contain variables, so we will need a
-generalization of pattern matching---called @newterm{unification}---in which
+generalization of pattern matching---called @dfn{unification}---in which
 both the ``pattern'' and the ``datum'' may contain variables.
 
 A unifier takes two patterns, each containing constants and variables, and
@@ -25991,11 +25991,11 @@ and the application of query-language rules is in fact accomplished through a
 legitimate method of inference.@footnote{That a particular method of inference
 is legitimate is not a trivial assertion.  One must prove that if one starts
 with true premises, only true conclusions can be derived.  The method of
-inference represented by rule applications is @newterm{modus ponens}, the
+inference represented by rule applications is @dfn{modus ponens}, the
 familiar method of inference that says that if @i{A} is true and @emph{A
 implies B} is true, then we may conclude that @i{B} is true.} This
 identification of the query language with mathematical logic is not really
-valid, though, because the query language provides a @newterm{control
+valid, though, because the query language provides a @dfn{control
 structure} that interprets the logical statements procedurally.  We can often
 take advantage of this control structure.  For example, to find all of the
 supervisors of programmers we could formulate a query in either of two
@@ -26184,7 +26184,7 @@ frame does not satisfy the pattern and is not filtered out of the initial
 stream of frames.  The result of the query is thus the empty frame, which is
 used to instantiate the input query to produce @code{(not (baseball-fan
 (Bitdiddle Ben)))}.} In other words, the @code{not} of logic programming
-languages reflects the so-called @newterm{closed world assumption} that all
+languages reflects the so-called @dfn{closed world assumption} that all
 relevant information has been included in the data base.@footnote{A discussion
 and justification of this treatment of @code{not} can be found in the article
 by Clark (1978).}
@@ -27188,7 +27188,7 @@ the expression is the symbol @code{?}, rather than having to extract characters
 from the symbol.  The syntax transformation is accomplished by the following
 procedure:@footnote{Most Lisp systems give the user the ability to modify the
 ordinary @code{read} procedure to perform such transformations by defining
-@newterm{reader macro characters}.  Quoted expressions are already handled in
+@dfn{reader macro characters}.  Quoted expressions are already handled in
 this way: The reader automatically translates @code{'expression} into
 @code{(quote expression)} before the evaluator sees it.  We could arrange for
 @code{?expression} to be transformed into @code{(? expression)} in the same
@@ -27533,9 +27533,9 @@ more complete description of the control structure of the Lisp evaluator, we
 must work at a more primitive level than Lisp itself.
 
 In this chapter we will describe processes in terms of the step-by-step
-operation of a traditional computer.  Such a computer, or @newterm{register
-machine}, sequentially executes @newterm{instructions} that manipulate the
-contents of a fixed set of storage elements called @newterm{registers}.  A
+operation of a traditional computer.  Such a computer, or @dfn{register
+machine}, sequentially executes @dfn{instructions} that manipulate the
+contents of a fixed set of storage elements called @dfn{registers}.  A
 typical register-machine instruction applies a primitive operation to the
 contents of some registers and assigns the result to another register.  Our
 descriptions of processes executed by register machines will look very much
@@ -27579,8 +27579,8 @@ directly with the registers and operations of the evaluator register machine.
 @node	5-1, 5-2, Chapter 5, Chapter 5
 @section Designing Register Machines
 
-To design a register machine, we must design its @newterm{data paths}
-(registers and operations) and the @newterm{controller} that sequences these
+To design a register machine, we must design its @dfn{data paths}
+(registers and operations) and the @dfn{controller} that sequences these
 operations.  To illustrate the design of a simple register machine, let us
 examine Euclid's Algorithm, which is used to compute the greatest common
 divisor (@acronym{GCD}) of two integers.  As we saw in section @ref{1-2-5},
@@ -27758,8 +27758,8 @@ control.  (The source is a register, a constant, or an operation.)  To describe
 an operation, we give it a name and specify its inputs (registers or
 constants).
 
-We define the controller of a machine as a sequence of @newterm{instructions}
-together with @newterm{labels} that identify @newterm{entry points} in the
+We define the controller of a machine as a sequence of @dfn{instructions}
+together with @dfn{labels} that identify @dfn{entry points} in the
 sequence. An instruction is one of the following:
 
 @itemize @bullet
@@ -27917,7 +27917,7 @@ just as we do any other operation that computes a value.
 in a fundamental way: It does not produce an output value to be stored in a
 register.  Though it has an effect, this effect is not on a part of the machine
 we are designing.  We will refer to this kind of operation as an
-@newterm{action}.  We will represent an action in a data-path diagram just as
+@dfn{action}.  We will represent an action in a data-path diagram just as
 we represent an operation that computes a value---as a trapezoid that contains
 the name of the action.  Arrows point to the action box from any inputs
 (registers or constants).  We also associate a button with the action.  Pushing
@@ -28203,7 +28203,7 @@ We have removed the duplicate data-path components (so that the data paths are
 again as in @ref{Figure 5-1}), but the controller now has two @acronym{GCD}
 sequences that differ only in their entry-point labels.  It would be better to
 replace these two sequences by branches to a single sequence---a @code{gcd}
-@newterm{subroutine}---at the end of which we branch back to the correct place
+@dfn{subroutine}---at the end of which we branch back to the correct place
 in the main instruction sequence.  We can accomplish this as follows: Before
 branching to @code{gcd}, we place a distinguishing value (such as 0 or 1) into
 a special register, @code{continue}.  At the end of the @code{gcd} subroutine
@@ -28418,7 +28418,7 @@ Since there is no @emph{a priori} limit on the depth of nested recursive calls,
 we may need to save an arbitrary number of register values.  These values must
 be restored in the reverse of the order in which they were saved, since in a
 nest of recursions the last subproblem to be entered is the first to be
-finished.  This dictates the use of a @newterm{stack}, or ``last in, first
+finished.  This dictates the use of a @dfn{stack}, or ``last in, first
 out'' data structure, to save register values.  We can extend the
 register-machine language to include a stack by adding two kinds of
 instructions: Values are placed on the stack using a @code{save} instruction
@@ -28822,7 +28822,7 @@ controller instructions one by one.
 include the registers, operations, and controller of the particular machine
 being defined.  First it allocates a register in the new machine for each of
 the supplied register names and installs the designated operations in the
-machine.  Then it uses an @newterm{assembler} (described below in section
+machine.  Then it uses an @dfn{assembler} (described below in section
 @ref{5-2-2}) to transform the controller list into instructions for the new
 machine and installs these as the machine's instruction sequence.
 @code{Make-machine} returns as its value the modified machine model.
@@ -28913,7 +28913,7 @@ The following procedures are used to access stacks:
 The @code{make-new-machine} procedure, shown in @ref{Figure 5-13}, constructs
 an object whose local state consists of a stack, an initially empty instruction
 sequence, a list of operations that initially contains an operation to
-initialize the stack, and a @newterm{register table} that initially contains
+initialize the stack, and a @dfn{register table} that initially contains
 two registers, named @code{flag} and @code{pc} (for ``program counter'').  The
 internal procedure @code{allocate-register} adds new entries to the register
 table, and the internal procedure @code{lookup-register} looks up registers in
@@ -28927,7 +28927,7 @@ branch by examining the contents of @code{flag}.
 The @code{pc} register determines the sequencing of instructions as the machine
 runs.  This sequencing is implemented by the internal procedure @code{execute}.
 In the simulation model, each machine instruction is a data structure that
-includes a procedure of no arguments, called the @newterm{instruction execution
+includes a procedure of no arguments, called the @dfn{instruction execution
 procedure}, such that calling this procedure simulates executing the
 instruction.  As the simulation runs, @code{pc} points to the place in the
 instruction sequence beginning with the next instruction to be executed.
@@ -29697,7 +29697,7 @@ have to repeatedly invoke @code{get-register-contents},
 @end quotation
 
 @quotation
-@strong{@anchor{Exercise 5-15}Exercise 5.15:} Add @newterm{instruction
+@strong{@anchor{Exercise 5-15}Exercise 5.15:} Add @dfn{instruction
 counting} to the register machine simulation.  That is, have the machine model
 keep track of the number of instructions executed.  Extend the machine model's
 interface to accept a new message that prints the value of the instruction
@@ -29706,7 +29706,7 @@ count and resets the count to zero.
 
 @quotation
 @strong{@anchor{Exercise 5-16}Exercise 5.16:} Augment the simulator to provide
-for @newterm{instruction tracing}.  That is, before each instruction is
+for @dfn{instruction tracing}.  That is, before each instruction is
 executed, the simulator should print the text of the instruction.  Make the
 machine model accept @code{trace-on} and @code{trace-off} messages to turn
 tracing on and off.
@@ -29733,7 +29733,7 @@ tracing on and off for designated machine registers.
 
 @quotation
 @strong{@anchor{Exercise 5-19}Exercise 5.19:} Alyssa P. Hacker wants a
-@newterm{breakpoint} feature in the simulator to help her debug her machine
+@dfn{breakpoint} feature in the simulator to help her debug her machine
 designs.  You have been hired to install this feature for her.  She wants to be
 able to specify a place in the controller sequence where the simulator will
 stop and allow her to examine the state of the machine.  You are to implement a
@@ -29782,7 +29782,7 @@ or to remove all breakpoints by means of
 
 In section @ref{5-4}, we will show how to implement a Scheme evaluator as a
 register machine.  In order to simplify the discussion, we will assume that our
-register machines can be equipped with a @newterm{list-structured memory}, in
+register machines can be equipped with a @dfn{list-structured memory}, in
 which the basic operations for manipulating list-structured data are primitive.
 Postulating the existence of such a memory is a useful abstraction when one is
 focusing on the mechanisms of control in a Scheme interpreter, but this does
@@ -29802,12 +29802,12 @@ structures created by the interpreter itself, such as environments and argument
 lists.  Although the constant creation of new data objects would pose no
 problem on a computer with an infinite amount of rapidly addressable memory,
 computer memories are available only in finite sizes (more's the pity).  Lisp
-systems thus provide an @newterm{automatic storage allocation} facility to
+systems thus provide an @dfn{automatic storage allocation} facility to
 support the illusion of an infinite memory.  When a data object is no longer
 needed, the memory allocated to it is automatically recycled and used to
 construct new data objects.  There are various techniques for providing such
 automatic storage allocation.  The method we shall discuss in this section is
-called @newterm{garbage collection}.
+called @dfn{garbage collection}.
 
 @menu
 * 5-3-1::            Memory as Vectors
@@ -29819,17 +29819,17 @@ called @newterm{garbage collection}.
 
 A conventional computer memory can be thought of as an array of cubbyholes,
 each of which can contain a piece of information.  Each cubbyhole has a unique
-name, called its @newterm{address} or @newterm{location}.  Typical memory
+name, called its @dfn{address} or @dfn{location}.  Typical memory
 systems provide two primitive operations: one that fetches the data stored in a
 specified location and one that assigns new data to a specified location.
 Memory addresses can be incremented to support sequential access to some set of
 the cubbyholes.  More generally, many important data operations require that
 memory addresses be treated as data, which can be stored in memory locations
 and manipulated in machine registers.  The representation of list structure is
-one application of such @newterm{address arithmetic}.
+one application of such @dfn{address arithmetic}.
 
 To model computer memory, we use a new kind of data structure called a
-@newterm{vector}.  Abstractly, a vector is a compound data object whose
+@dfn{vector}.  Abstractly, a vector is a compound data object whose
 individual elements can be accessed by means of an integer index in an amount
 of time that is independent of the index.@footnote{We could represent memory as
 lists of items.  However, the access time would then not be independent of the
@@ -29855,9 +29855,9 @@ value of the fifth entry of the vector @code{v} to 7.@footnote{For
 completeness, we should specify a @code{make-vector} operation that constructs
 vectors.  However, in the present application we will use vectors only to model
 fixed divisions of the computer memory.}  For computer memory, this access can
-be implemented through the use of address arithmetic to combine a @newterm{base
+be implemented through the use of address arithmetic to combine a @dfn{base
 address} that specifies the beginning location of a vector in memory with an
-@newterm{index} that specifies the offset of a particular element of the
+@dfn{index} that specifies the offset of a particular element of the
 vector.
 
 @subsubheading Representing Lisp data
@@ -29871,7 +29871,7 @@ index, and the @code{cdr} of the pair is the entry in @code{the-cdrs} with the
 designated index.  We also need a representation for objects other than pairs
 (such as numbers and symbols) and a way to distinguish one kind of data from
 another.  There are many methods of accomplishing this, but they all reduce to
-using @newterm{typed pointers}, that is, to extending the notion of ``pointer''
+using @dfn{typed pointers}, that is, to extending the notion of ``pointer''
 to include information on data type.@footnote{This is precisely the same
 ``tagged data'' idea we introduced in @ref{Chapter 2} for dealing with generic
 operations.  Here, however, the data types are included at the primitive
@@ -29886,12 +29886,12 @@ which the Lisp system is to be implemented.  The execution efficiency of Lisp
 programs will be strongly dependent on how cleverly this choice is made, but it
 is difficult to formulate general design rules for good choices.  The most
 straightforward way to implement typed pointers is to allocate a fixed set of
-bits in each pointer to be a @newterm{type field} that encodes the data type.
+bits in each pointer to be a @dfn{type field} that encodes the data type.
 Important questions to be addressed in designing such a representation include
 the following: How many type bits are required?  How large must the vector
 indices be?  How efficiently can the primitive machine instructions be used to
 manipulate the type fields of pointers?  Machines that include special hardware
-for the efficient handling of type fields are said to have @newterm{tagged
+for the efficient handling of type fields are said to have @dfn{tagged
 architectures}.} @ref{Figure 5-14} illustrates the use of this method to
 represent the list @code{((1 2) 3 4)}, whose box-and-pointer diagram is also
 shown.  We use letter prefixes to denote the data-type information.  Thus, a
@@ -29941,7 +29941,7 @@ where the number is stored, equal numbers will be guaranteed to have equal
 pointers only if we are careful never to store the same number in more than one
 location.}  To deal with numbers that are too large to be represented in the
 fixed amount of space allocated for a single pointer, we could use a distinct
-@newterm{bignum} data type, for which the pointer designates a list in which
+@dfn{bignum} data type, for which the pointer designates a list in which
 the parts of the number are stored.@footnote{This is just like writing a number
 as a sequence of digits, except that each ``digit'' is a number between 0 and
 the largest number that can be stored in a single pointer.}
@@ -29954,14 +29954,14 @@ as the ``same'' symbol by @code{eq?} and we want @code{eq?} to be a simple test
 for equality of pointers, we must ensure that if the reader sees the same
 character string twice, it will use the same pointer (to the same sequence of
 characters) to represent both occurrences.  To accomplish this, the reader
-maintains a table, traditionally called the @newterm{obarray}, of all the
+maintains a table, traditionally called the @dfn{obarray}, of all the
 symbols it has ever encountered.  When the reader encounters a character string
 and is about to construct a symbol, it checks the obarray to see if it has ever
 before seen the same character string.  If it has not, it uses the characters
 to construct a new symbol (a typed pointer to a new character sequence) and
 enters this pointer in the obarray.  If the reader has seen the string before,
 it returns the symbol pointer stored in the obarray.  This process of replacing
-character strings by unique pointers is called @newterm{interning} symbols.
+character strings by unique pointers is called @dfn{interning} symbols.
 
 @subsubheading Implementing the primitive list operations
 
@@ -30015,7 +30015,7 @@ vector position.  We presume that there is a special register, @code{free},
 that always holds a pair pointer containing the next available index, and that
 we can increment the index part of that pointer to find the next free
 location.@footnote{There are other ways of finding free storage.  For example,
-we could link together all the unused pairs into a @newterm{free list}.  Our
+we could link together all the unused pairs into a @dfn{free list}.  Our
 free locations are consecutive (and hence can be accessed by incrementing a
 pointer) because we are using a compacting garbage collector, as we will see in
 section @ref{5-3-2}.}  For example, the instruction
@@ -30157,7 +30157,7 @@ large numbers of processors operating in parallel on a single memory, so it may
 be possible to use up memory much faster than we have postulated.}  However,
 most of the pairs generated in a typical computation are used only to hold
 intermediate results.  After these results are accessed, the pairs are no
-longer needed---they are @newterm{garbage}.  For instance, the computation
+longer needed---they are @dfn{garbage}.  For instance, the computation
 
 @lisp
 (accumulate + 0 (filter odd? (enumerate-interval 0 n)))
@@ -30174,7 +30174,7 @@ the illusion that there is an infinite amount of memory.
 In order to recycle pairs, we must have a way to determine which allocated
 pairs are not needed (in the sense that their contents can no longer influence
 the future of the computation).  The method we shall examine for accomplishing
-this is known as @newterm{garbage collection}.  Garbage collection is based on
+this is known as @dfn{garbage collection}.  Garbage collection is based on
 the observation that, at any moment in a Lisp interpretation, the only objects
 that can affect the future of the computation are those that can be reached by
 some succession of @code{car} and @code{cdr} operations starting from the
@@ -30184,7 +30184,7 @@ that items on the stack are accessible via the pointer in the stack register.}
 Any memory cell that is not so accessible may be recycled.
 
 There are many ways to perform garbage collection.  The method we shall examine
-here is called @newterm{stop-and-copy}.  The basic idea is to divide memory
+here is called @dfn{stop-and-copy}.  The basic idea is to divide memory
 into two halves: ``working memory'' and ``free memory.''  When @code{cons}
 constructs pairs, it allocates these in working memory.  When working memory is
 full, we perform garbage collection by locating all the useful pairs in working
@@ -30208,7 +30208,7 @@ garbage collection.  Baker's idea was extended by Hewitt, Lieberman, and Moon
 structure is more volatile and other structure is more permanent.
 
 An alternative commonly used garbage-collection technique is the
-@newterm{mark-sweep} method.  This consists of tracing all the structure
+@dfn{mark-sweep} method.  This consists of tracing all the structure
 accessible from the machine registers and marking each pair we reach.  We then
 scan all of memory, and any location that is unmarked is ``swept up'' as
 garbage and made available for reuse.  A full discussion of the mark-sweep
@@ -30218,7 +30218,7 @@ The Minsky-Fenichel-Yochelson algorithm is the dominant algorithm in use for
 large-memory systems because it examines only the useful part of memory.  This
 is in contrast to mark-sweep, in which the sweep phase must check all of
 memory.  A second advantage of stop-and-copy is that it is a
-@newterm{compacting} garbage collector.  That is, at the end of the
+@dfn{compacting} garbage collector.  That is, at the end of the
 garbage-collection phase the useful data will have been moved to consecutive
 memory locations, with all garbage pairs compressed out.  This can be an
 extremely important performance consideration in machines with virtual memory,
@@ -30302,10 +30302,10 @@ the @code{free} pointer is incremented.  In addition, the old location of the
 pair is marked to show that its contents have been moved.  This marking is done
 as follows: In the @code{car} position, we place a special tag that signals
 that this is an already-moved object.  (Such an object is traditionally called
-a @newterm{broken heart}.)@footnote{The term @emph{broken heart} was coined by
+a @dfn{broken heart}.)@footnote{The term @emph{broken heart} was coined by
 David Cressey, who wrote a garbage collector for MDL, a dialect of Lisp
 developed at @acronym{MIT} during the early 1970s.}  In the @code{cdr} position
-we place a @newterm{forwarding address} that points at the location to which
+we place a @dfn{forwarding address} that points at the location to which
 the object has been moved.
 
 After relocating the root, the garbage collector enters its basic cycle.  At
@@ -30469,7 +30469,7 @@ descriptions of register machines.  We will now perform this transformation on
 a more complex program, the metacircular evaluator of sections
 @ref{4-1-1}-@ref{4-1-4}, which shows how the behavior of a Scheme interpreter
 can be described in terms of the procedures @code{eval} and @code{apply}.  The
-@newterm{explicit-control evaluator} that we develop in this section shows how
+@dfn{explicit-control evaluator} that we develop in this section shows how
 the underlying procedure-calling and argument-passing mechanisms used in the
 evaluation process can be described in terms of operations on registers and
 stacks.  In addition, the explicit-control evaluator can serve as an
@@ -30626,7 +30626,7 @@ be saved (because their values will be needed later).@footnote{This is an
 important but subtle point in translating algorithms from a procedural
 language, such as Lisp, to a register-machine language.  As an alternative to
 saving only what is needed, we could save all the registers (except @code{val})
-before each recursive call. This is called a @newterm{framed-stack} discipline.
+before each recursive call. This is called a @dfn{framed-stack} discipline.
 This would work but might save more registers than necessary; this could be an
 important consideration in a system where stack operations are expensive.
 Saving registers whose contents will not be needed later may also hold onto
@@ -30737,7 +30737,7 @@ evaluated.  Thus, we return from the evaluation to a special entry point
 @code{ev-appl-accum-last-arg}, which restores the argument list, accumulates
 the new argument, restores the saved procedure, and goes off to perform the
 application.@footnote{The optimization of treating the last operand specially
-is known as @newterm{evlis tail recursion} (see Wand 1980).  We could be
+is known as @dfn{evlis tail recursion} (see Wand 1980).  We could be
 somewhat more efficient in the argument evaluation loop if we made evaluation
 of the first operand a special case too.  This would permit us to postpone
 initializing @code{argl} until after evaluating the first operand, so as to
@@ -30925,7 +30925,7 @@ next.@footnote{We saw in section @ref{5-1} how to implement such a process with
 a register machine that had no stack; the state of the process was stored in a
 fixed set of registers.} An evaluator that can execute a procedure such as
 @code{sqrt-iter} without requiring increasing storage as the procedure
-continues to call itself is called a @newterm{tail-recursive} evaluator.  The
+continues to call itself is called a @dfn{tail-recursive} evaluator.  The
 metacircular implementation of the evaluator in @ref{Chapter 4} does not
 specify whether the evaluator is tail-recursive, because that evaluator
 inherits its mechanism for saving state from the underlying Scheme.  With the
@@ -31474,8 +31474,8 @@ Commercial general-purpose computers are register machines organized around a
 collection of registers and operations that constitute an efficient and
 convenient universal set of data paths.  The controller for a general-purpose
 machine is an interpreter for a register-machine language like the one we have
-been using.  This language is called the @newterm{native language} of the
-machine, or simply @newterm{machine language}.  Programs written in machine
+been using.  This language is called the @dfn{native language} of the
+machine, or simply @dfn{machine language}.  Programs written in machine
 language are sequences of instructions that use the machine's data paths.  For
 example, the explicit-control evaluator's instruction sequence can be thought
 of as a machine-language program for a general-purpose computer rather than as
@@ -31485,18 +31485,18 @@ There are two common strategies for bridging the gap between higher-level
 languages and register-machine languages.  The explicit-control evaluator
 illustrates the strategy of interpretation.  An interpreter written in the
 native language of a machine configures the machine to execute programs written
-in a language (called the @newterm{source language}) that may differ from the
+in a language (called the @dfn{source language}) that may differ from the
 native language of the machine performing the evaluation.  The primitive
 procedures of the source language are implemented as a library of subroutines
 written in the native language of the given machine.  A program to be
-interpreted (called the @newterm{source program}) is represented as a data
+interpreted (called the @dfn{source program}) is represented as a data
 structure.  The interpreter traverses this data structure, analyzing the source
 program.  As it does so, it simulates the intended behavior of the source
 program by calling appropriate primitive subroutines from the library.
 
-In this section, we explore the alternative strategy of @newterm{compilation}.
+In this section, we explore the alternative strategy of @dfn{compilation}.
 A compiler for a given source language and machine translates a source program
-into an equivalent program (called the @newterm{object program}) written in the
+into an equivalent program (called the @dfn{object program}) written in the
 machine's native language.  The compiler that we implement in this section
 translates programs written in Scheme into sequences of instructions to be
 executed using the explicit-control evaluator machine's data
@@ -31638,7 +31638,7 @@ operations were available as operations for the register machine.  (Of course,
 when we simulated the register machine in Scheme, we used the actual Scheme
 procedures in our register machine simulation.)}  @code{Compile} performs a
 case analysis on the syntactic type of the expression to be compiled.  For each
-type of expression, it dispatches to a specialized @newterm{code generator}:
+type of expression, it dispatches to a specialized @dfn{code generator}:
 
 @lisp
 (define (compile exp target linkage)
@@ -31667,9 +31667,9 @@ type of expression, it dispatches to a specialized @newterm{code generator}:
 @subsubheading Targets and linkages
 
 @code{Compile} and the code generators that it calls take two arguments in
-addition to the expression to compile.  There is a @newterm{target}, which
+addition to the expression to compile.  There is a @dfn{target}, which
 specifies the register in which the compiled code is to return the value of the
-expression.  There is also a @newterm{linkage descriptor}, which describes how
+expression.  There is also a @dfn{linkage descriptor}, which describes how
 the code resulting from the compilation of the expression should proceed when
 it has finished its execution.  The linkage descriptor can require that the
 code do one of the following three things:
@@ -31714,7 +31714,7 @@ register.
 
 @subsubheading Instruction sequences and stack usage
 
-Each code generator returns an @newterm{instruction sequence} containing the
+Each code generator returns an @dfn{instruction sequence} containing the
 object code it has generated for the expression.  Code generation for a
 compound expression is accomplished by combining the output from simpler code
 generators for component expressions, just as evaluation of a compound
@@ -31797,7 +31797,7 @@ An instruction sequence will contain three pieces of information:
 
 @item
 the set of registers that must be initialized before the instructions in the
-sequence are executed (these registers are said to be @newterm{needed} by the
+sequence are executed (these registers are said to be @dfn{needed} by the
 sequence),
 
 @item
@@ -31805,7 +31805,7 @@ the set of registers whose values are modified by the instructions in the
 sequence, and
 
 @item
-the actual instructions (also called @newterm{statements}) in the sequence.
+the actual instructions (also called @dfn{statements}) in the sequence.
 
 @end itemize
 
@@ -31902,7 +31902,7 @@ generate the instruction @code{(goto (reg continue))}.  This needs the
 @code{next}, then we needn't include any additional instructions.  Otherwise,
 the linkage is a label, and we generate a @code{goto} to that label, an
 instruction that does not need or modify any registers.@footnote{This procedure
-uses a feature of Lisp called @newterm{backquote} (or @newterm{quasiquote})
+uses a feature of Lisp called @dfn{backquote} (or @dfn{quasiquote})
 that is handy for constructing lists.  Preceding a list with a backquote symbol
 is much like quoting it, except that anything in the list that is flagged with
 a comma is evaluated.
@@ -33140,7 +33140,7 @@ code to perform the test, as well as code for primitive and compound branches
 controller that implements primitives, but we presume that these instructions
 make use of primitive arithmetic operations in the machine's data paths.
 Consider how much less code would be generated if the compiler could
-@newterm{open-code} primitives---that is, if it could generate code to directly
+@dfn{open-code} primitives---that is, if it could generate code to directly
 use these primitive machine operations.  The expression @code{(+ a 1)} might be
 compiled into something as simple as @footnote{We have used the same symbol
 @code{+} here to denote both the source-language procedure and the machine
@@ -33253,9 +33253,9 @@ frame.
 
 We can exploit this fact by inventing a new kind of variable-lookup operation,
 @code{lexical-address-lookup}, that takes as arguments an environment and a
-@newterm{lexical address} that consists of two numbers: a @newterm{frame
+@dfn{lexical address} that consists of two numbers: a @dfn{frame
 number}, which specifies how many frames to pass over, and a
-@newterm{displacement number}, which specifies how many variables to pass over
+@dfn{displacement number}, which specifies how many variables to pass over
 in that frame.  @code{Lexical-address-lookup} will produce the value of the
 variable stored at that lexical address relative to the current environment.
 If we add the @code{lexical-address-lookup} operation to our machine, we can
@@ -33284,7 +33284,7 @@ is at (0,2).
 @end lisp
 
 One way for the compiler to produce code that uses lexical addressing is to
-maintain a data structure called a @newterm{compile-time environment}.  This
+maintain a data structure called a @dfn{compile-time environment}.  This
 keeps track of which variables will be at which positions in which frames in
 the run-time environment when a particular variable-access operation is
 executed.  The compile-time environment is a list of frames, each containing a
